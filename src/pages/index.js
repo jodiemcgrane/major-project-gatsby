@@ -1,5 +1,8 @@
 import React from "react"
 
+//Components
+import AllJournals from "../components/AllJournals"
+
 export default function Home() {
-  return <div>Hello world!</div>
+  return <AllJournals />
 }
