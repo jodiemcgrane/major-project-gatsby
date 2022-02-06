@@ -1,8 +1,8 @@
 import React from "react"
 
 //Components
-import AllJournals from "../components/AllJournals"
+//import AllJournals from "../components/AllJournals"
 
 export default function Home() {
-  return <AllJournals />
+  return <div>This is the index page</div>
 }
