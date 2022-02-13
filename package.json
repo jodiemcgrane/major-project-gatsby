@@ -17,6 +17,7 @@
     "@atlas-design-system/core": "^5.7.2",
     "@atlas-design-system/react": "^5.7.3",
     "@atlas-design-system/tokens": "^5.1.0",
+    "axios": "^0.25.0",
     "gatsby": "^4.4.0",
     "gatsby-source-strapi": "^1.0.2",
     "react": "^17.0.1",
