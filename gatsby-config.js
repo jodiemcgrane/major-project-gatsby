@@ -7,13 +7,13 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: {
-    //     apiURL: `http://localhost:1337`,
-    //     queryLimit: 1000,
-    //     collectionTypes: [`journal`],
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://internport-api.herokuapp.com`,
+        queryLimit: 1000,
+        collectionTypes: [`assignment`],
+      },
+    },
   ],
 }

@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { Button } from "@atlas-design-system/react"
 
 const Navbar = () => {
-  return <div></div>
+  return <div>Navbar</div>
 }
 
 export default Navbar
