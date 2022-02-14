@@ -12,7 +12,7 @@ module.exports = {
       options: {
         apiURL: `http://internport-api.herokuapp.com`,
         queryLimit: 1000,
-        collectionTypes: [`assignment`],
+        collectionTypes: [`user`, `assignment`, `journal`, `job`],
       },
     },
   ],
