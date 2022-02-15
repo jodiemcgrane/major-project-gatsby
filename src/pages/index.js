@@ -3,6 +3,7 @@ import React from "react"
 //Components
 import LoginForm from "../components/LoginForm"
 //import AllJournals from "../components/AllJournals"
+//import AllAssignments from "../components/AllAssignments"
 
 export default function Welcome() {
   return (

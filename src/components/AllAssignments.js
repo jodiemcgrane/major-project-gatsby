@@ -3,6 +3,9 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
+//Components
+import AssignmentsList from "./AssignmentsList"
+
 const query = graphql`
   {
     allStrapiAssignment {
@@ -23,7 +26,11 @@ const AllAssignments = () => {
   const data = useStaticQuery(query)
   const assignments = data.allStrapiAssignment.nodes
 
-  return <div></div>
+  return (
+    <div>
+      <AssignmentsList assignments={assignments} />
+    </div>
+  )
 }
 
 export default AllAssignments
