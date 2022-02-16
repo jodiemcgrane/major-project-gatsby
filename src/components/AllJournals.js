@@ -3,6 +3,9 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
+//Components
+import JournalsList from "./JournalsList"
+
 const query = graphql`
   {
     allStrapiJournal {
@@ -27,7 +30,11 @@ const AllJournals = () => {
   const data = useStaticQuery(query)
   const journals = data.allStrapiJournal.nodes
 
-  return <div></div>
+  return (
+    <div>
+      <JournalsList journals={journals} />
+    </div>
+  )
 }
 
 export default AllJournals
