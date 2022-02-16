@@ -2,8 +2,10 @@ import React from "react"
 
 //Components
 import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 //CSS
+import "../assets/css/atlas.css"
 import "../assets/css/main.css"
 
 const Layout = ({ children }) => {
@@ -12,6 +14,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   )
 }

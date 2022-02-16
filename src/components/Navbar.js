@@ -9,7 +9,8 @@ const Navbar = () => {
     <Header
       rightNavigation={
         <>
-          <Button component={Link} to="/">Home</Button>
+          <Button>Assignments</Button>
+          <Button>Journals</Button>
         </>
       }
     />

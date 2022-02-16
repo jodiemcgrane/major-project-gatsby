@@ -1,1 +1,14 @@
-@import "@atlas-design-system/core/dist/styles/main.css"
+:root {
+  --max-width: 1120;
+}
+
+.page {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: lightgreen;
+}
+
+.page {
+  min-height: calc(100vh - (6rem + 4rem));
+}
