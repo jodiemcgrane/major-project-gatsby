@@ -1,11 +1,15 @@
-import React from "react"
-import axios from "axios"
-import { useState } from "react"
+import React, { useState } from "react"
+import { navigate } from "gatsby"
+//import axios from "axios"
+
+//Hooks
+import useAuth from "../hooks/useAuth"
 
 //Components
 import { FormControl, Input, Button } from "@atlas-design-system/react"
 
-const LoginForm = () => {
+const LoginForm = ({ redirect }) => {
+  const { state, login } = useAuth()
   const [form, setForm] = useState({})
 
   const handleForm = e => {
@@ -16,14 +20,13 @@ const LoginForm = () => {
   }
 
   const submitForm = () => {
-    axios
-      .post("http://internport-api.herokuapp.com/auth/local", {
-        identifier: form.identifier,
-        password: form.password,
-      })
+    login({
+      identifier: form.identifier,
+      password: form.password,
+    })
       .then(response => {
-        let token = response.data.jwt
-        localStorage.setItem("Token", token)
+        console.log(response.jwt)
+        navigate(redirect)
       })
       .catch(err => console.log(err))
   }

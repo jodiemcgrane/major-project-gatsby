@@ -1,9 +1,9 @@
 import React from "react"
 import LoginForm from "../components/LoginForm"
 
-//import Layout from "../components/layout"
+import Layout from "../components/layout"
 
-const WelcomePage = ({ location }) => {
+const LoginPage = ({ location }) => {
   const { state: routeState } = location
   const redirect = !routeState
     ? "/app"
@@ -12,12 +12,14 @@ const WelcomePage = ({ location }) => {
     : `/app/${routeState.redirect}`
 
   return (
-    <main className="page">
+    <Layout>
       <h1>Login</h1>
       <p>Please use your credentials to login</p>
-      <LoginForm redirect={redirect} />
-    </main>
+      <div>
+        <LoginForm redirect={redirect} />
+      </div>
+    </Layout>
   )
 }
 
-export default WelcomePage
+export default LoginPage

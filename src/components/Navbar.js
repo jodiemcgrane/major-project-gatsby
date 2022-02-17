@@ -9,8 +9,8 @@ const Navbar = () => {
     <Header
       rightNavigation={
         <>
-          <Button>Assignments</Button>
-          <Button>Journals</Button>
+          <Button><Link to="/app">Dashboard</Link></Button>
+          <Button><Link to="/app/home">Home</Link></Button>
         </>
       }
     />
