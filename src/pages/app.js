@@ -23,7 +23,7 @@ const App = ({ location }) => {
     <Layout>
       <Router basepath="/app" className="page">
         <Assignments path="/assignments" />
-        <Assignments path="/journals" />
+        <Journals path="/journals" />
         <Home default />
       </Router>
     </Layout>

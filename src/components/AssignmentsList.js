@@ -5,9 +5,11 @@ const AssignmentsList = ({ assignments = [] }) => {
   return <div>
       {assignments.map(assignment => {
           return (
-              <Link key={assignment.id} to='/'>
-                  <h5>{assignment.title}</h5>
-              </Link>
+              <div key={assignment.id}>
+                  <h3>{assignment.title}</h3>
+                  <p>{assignment.dueDate}</p>
+                  <p>{assignment.information}</p>
+              </div>
           )
       })}
   </div>

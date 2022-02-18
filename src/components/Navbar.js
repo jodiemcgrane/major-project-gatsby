@@ -15,7 +15,7 @@ const Navbar = () => {
           <Link style={{ textDecoration: "none" }} to="/app/assignments">
             Assignments
           </Link>
-          <Link style={{ textDecoration: "none" }} to="/app/journal">
+          <Link style={{ textDecoration: "none" }} to="/app/journals">
             Journals
           </Link>
         </>

@@ -6,9 +6,12 @@ const JournalsList = ({ journals = [] }) => {
     <div>
       {journals.map(journal => {
         return (
-          <Link key={journal.id} to="/">
-            <h5>{journal.title}</h5>
-          </Link>
+          <div key={journal.id}>
+            <h3>{journal.title}</h3>
+            <p>{journal.text}</p>
+            <p>Written by {journal.user.username}</p>
+            <p>Assignment: {journal.assignment.title}</p>
+          </div>
         )
       })}
     </div>

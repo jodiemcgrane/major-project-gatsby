@@ -1,8 +1,13 @@
-import React from 'react'
+import React from "react"
+
+//Components
+import AllAssignments from "../AllAssignments"
 
 const Assignments = () => {
   return (
-    <main className="page">Assignments page</main>
+    <main className="page">
+      <AllAssignments />
+    </main>
   )
 }
 
