@@ -6,7 +6,6 @@ import Footer from "./Footer"
 
 //CSS
 import "../assets/css/atlas.css"
-import "../assets/css/main.css"
 
 const Layout = ({ children }) => {
 

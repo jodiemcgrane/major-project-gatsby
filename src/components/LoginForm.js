@@ -1,12 +1,17 @@
 import React, { useState } from "react"
 import { navigate } from "gatsby"
-//import axios from "axios"
+import { Link } from "gatsby"
 
 //Hooks
 import useAuth from "../hooks/useAuth"
 
 //Components
-import { FormControl, Input, Button } from "@atlas-design-system/react"
+import {
+  FormControl,
+  Input,
+  Button,
+  Typography,
+} from "@atlas-design-system/react"
 
 const LoginForm = ({ redirect }) => {
   const { state, login } = useAuth()
@@ -32,22 +37,46 @@ const LoginForm = ({ redirect }) => {
   }
 
   return (
-    <>
-      <FormControl id="myFormControl" label="Username">
-        <Input id="myInput" name="identifier" onChange={handleForm} />
-      </FormControl>
-      <FormControl id="myFormControl" label="Password">
-        <Input
-          id="myInput"
-          type="password"
-          name="password"
-          onChange={handleForm}
-        />
-      </FormControl>
-      <Button appearance="primary" type="submit" onClick={submitForm}>
-        Login
-      </Button>
-    </>
+    <div className="login-form">
+      <div className="col-md-6">
+        <div className="row">
+          <Typography variant="displayText3">Login</Typography>
+        </div>
+
+        <div className="row">
+          <Typography variant="displayText7">
+            Please log in with your credentials.
+          </Typography>
+        </div>
+
+        <FormControl label="Email">
+          <Input name="identifier" onChange={handleForm} />
+        </FormControl>
+
+        <FormControl label="Password">
+          <Input type="password" name="password" onChange={handleForm} />
+        </FormControl>
+
+        <div className="row login-button">
+          <Button
+            appearance="primary"
+            size="large"
+            type="submit"
+            onClick={submitForm}
+          >
+            Login
+          </Button>
+        </div>
+
+        <div className="row">
+          <Link href="#">
+            <Typography variant="contentText2">
+              Forgot your password?
+            </Typography>
+          </Link>
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -1,1 +1,46 @@
-@import "@atlas-design-system/core/dist/styles/main.css"
+@import "@atlas-design-system/core/dist/styles/partials/global.css";
+@import "@atlas-design-system/core/dist/styles/partials/typography.css";
+@import "@atlas-design-system/core/dist/styles/partials/flexboxgrid.css";
+@import "@atlas-design-system/tokens/dist/tokens.css";
+@import "@atlas-design-system/core/dist/styles/partials/fonts.css";
+
+@import "@atlas-design-system/core/dist/styles/partials/buttons.css";
+@import "@atlas-design-system/core/dist/styles/partials/footer.css";
+@import "@atlas-design-system/core/dist/styles/partials/form-control.css";
+@import "@atlas-design-system/core/dist/styles/partials/form.css";
+@import "@atlas-design-system/core/dist/styles/partials/header.css";
+@import "@atlas-design-system/core/dist/styles/partials/link.css";
+@import "@atlas-design-system/core/dist/styles/partials/link-group.css";
+@import "@atlas-design-system/core/dist/styles/partials/input.css";
+
+/* :root {
+    --max-width: 1120;
+  } */
+  
+  .page {
+    width: 90vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  .page {
+    min-height: calc(100vh - (6rem + 4rem));
+  }
+  
+  .red {
+    background-color: blueviolet;
+  }
+  
+  .login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: auto;
+  }
+  
+  .login-button {
+    justify-content: center;
+    padding-top: var(--spaceXL);
+    padding-bottom: var(--spaceL);
+  }

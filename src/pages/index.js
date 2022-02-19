@@ -12,11 +12,14 @@ const WelcomePage = ({ location }) => {
     : `/app/${routeState.redirect}`
 
   return (
-    <main className="page">
-      <h1>Login</h1>
-      <p>Please use your credentials to login</p>
-      <LoginForm redirect={redirect} />
-    </main>
+    <div className="row">
+      <div className="col-md-6">
+        <p>hello</p>
+      </div>
+      <div className="col-md-6">
+        <LoginForm redirect={redirect} />
+      </div>
+    </div>
   )
 }
 
