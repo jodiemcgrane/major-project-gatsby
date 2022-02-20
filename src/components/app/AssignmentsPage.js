@@ -8,6 +8,7 @@ const query = graphql`
   {
     allStrapiAssignment {
       nodes {
+        id
         title
         description {
           id

@@ -1,10 +1,8 @@
-//Component for retrieving ALL journals from GraphQL
-
-import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 //Components
-import JournalsList from "./JournalsList"
+import Journals from "../Journals"
 
 const query = graphql`
   {
@@ -13,28 +11,30 @@ const query = graphql`
         id
         title
         text
-        submitted
+        published_at
         user {
+          id
           username
         }
         assignment {
           id
           title
+          dueDate
         }
       }
     }
   }
 `
 
-const AllJournals = () => {
+const JournalsPage = () => {
   const data = useStaticQuery(query)
   const journals = data.allStrapiJournal.nodes
 
   return (
-    <div>
-      <JournalsList journals={journals} />
-    </div>
+    <main className="page">
+      <Journals journals={journals} />
+    </main>
   )
 }
 
-export default AllJournals
+export default JournalsPage
