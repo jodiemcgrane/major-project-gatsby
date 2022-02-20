@@ -26,10 +26,8 @@
   .page {
     min-height: calc(100vh - (6rem + 4rem));
   }
-  
-  .red {
-    background-color: blueviolet;
-  }
+
+  /* LOGIN FORM */
   
   .login-form {
     display: flex;
@@ -38,9 +36,21 @@
     position: relative;
     overflow: auto;
   }
+
+  .login-header {
+    padding-bottom: var(--spaceS);
+  }
+
+  .login-text {
+    padding-bottom: var(--spaceXL);
+  }
   
   .login-button {
     justify-content: center;
     padding-top: var(--spaceXL);
     padding-bottom: var(--spaceL);
+  }
+
+  .login-input {
+    padding-top: var(--spaceL);
   }

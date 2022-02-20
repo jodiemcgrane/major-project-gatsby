@@ -39,11 +39,11 @@ const LoginForm = ({ redirect }) => {
   return (
     <div className="login-form">
       <div className="col-md-6">
-        <div className="row">
+        <div className="row login-header">
           <Typography variant="displayText3">Login</Typography>
         </div>
 
-        <div className="row">
+        <div className="row login-text">
           <Typography variant="displayText7">
             Please log in with your credentials.
           </Typography>
@@ -53,9 +53,11 @@ const LoginForm = ({ redirect }) => {
           <Input name="identifier" onChange={handleForm} />
         </FormControl>
 
-        <FormControl label="Password">
-          <Input type="password" name="password" onChange={handleForm} />
-        </FormControl>
+        <div className="login-input">
+          <FormControl label="Password">
+            <Input type="password" name="password" onChange={handleForm} />
+          </FormControl>
+        </div>
 
         <div className="row login-button">
           <Button
