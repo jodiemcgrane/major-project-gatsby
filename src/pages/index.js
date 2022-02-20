@@ -1,7 +1,10 @@
 import React from "react"
-import LoginForm from "../components/LoginForm"
 
-//import Layout from "../components/layout"
+//Images
+import { StaticImage } from "gatsby-plugin-image"
+
+//Components
+import LoginForm from "../components/LoginForm"
 
 const WelcomePage = ({ location }) => {
   const { state: routeState } = location
@@ -14,7 +17,7 @@ const WelcomePage = ({ location }) => {
   return (
     <div className="row">
       <div className="col-md-6">
-        <p>hello</p>
+        <StaticImage src='../assets/images/hero-img.jpg' alt="Hero" />
       </div>
       <div className="col-md-6">
         <LoginForm redirect={redirect} />

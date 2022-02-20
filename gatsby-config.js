@@ -15,5 +15,8 @@ module.exports = {
         collectionTypes: [`assignment`, `journal`, `job`],
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
   ],
 }

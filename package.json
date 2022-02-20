@@ -19,7 +19,11 @@
     "@atlas-design-system/tokens": "^5.1.0",
     "axios": "^0.25.0",
     "gatsby": "^4.4.0",
+    "gatsby-plugin-image": "^2.7.0",
+    "gatsby-plugin-sharp": "^4.7.0",
+    "gatsby-source-filesystem": "^4.7.0",
     "gatsby-source-strapi": "^1.0.2",
+    "gatsby-transformer-sharp": "^4.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
