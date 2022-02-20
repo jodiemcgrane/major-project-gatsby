@@ -1,7 +1,6 @@
-import { Link } from "gatsby"
 import React from "react"
 
-const JournalsList = ({ journals = [] }) => {
+const JournalsList = ({ journals }) => {
   return (
     <div>
       {journals.map(journal => {

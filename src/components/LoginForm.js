@@ -71,7 +71,7 @@ const LoginForm = ({ redirect }) => {
         </div>
 
         <div className="row">
-          <Link href="#">
+          <Link to="/">
             <Typography variant="contentText2">
               Forgot your password?
             </Typography>

@@ -5,7 +5,7 @@ import { Router } from "@reach/router"
 //Components
 import Layout from "../components/layout"
 import Home from "../components/app/Home"
-import Assignments from "../components/app/Assignments"
+import AssignmentsPage from "../components/app/AssignmentsPage"
 import Journals from "../components/app/Journals"
 
 import useAuth from "../hooks/useAuth"
@@ -22,7 +22,7 @@ const App = ({ location }) => {
   return (
     <Layout>
       <Router basepath="/app" className="page">
-        <Assignments path="/assignments" />
+        <AssignmentsPage path="/assignments" />
         <Journals path="/journals" />
         <Home default />
       </Router>

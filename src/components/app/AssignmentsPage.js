@@ -1,36 +1,35 @@
-//Component for retrieving ALL assignments from GraphQL
-
-import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 //Components
-import AssignmentsList from "./AssignmentsList"
+import Assignments from "../Assignments"
 
 const query = graphql`
   {
     allStrapiAssignment {
       nodes {
         title
-        information
         description {
           id
           text
         }
+        information
         dueDate
+        published_at
       }
     }
   }
 `
 
-const AllAssignments = () => {
+const AssignmentsPage = () => {
   const data = useStaticQuery(query)
   const assignments = data.allStrapiAssignment.nodes
 
   return (
-    <div>
-      <AssignmentsList assignments={assignments} />
-    </div>
+    <main className="page">
+      <Assignments assignments={assignments} />
+    </main>
   )
 }
 
-export default AllAssignments
+export default AssignmentsPage

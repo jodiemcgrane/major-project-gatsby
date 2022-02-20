@@ -13,44 +13,43 @@
 @import "@atlas-design-system/core/dist/styles/partials/link-group.css";
 @import "@atlas-design-system/core/dist/styles/partials/input.css";
 
-/* :root {
-    --max-width: 1120;
-  } */
-  
-  .page {
-    width: 90vw;
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
-  
-  .page {
-    min-height: calc(100vh - (6rem + 4rem));
-  }
+.page {
+  width: 90vw;
+  max-width: var(--screenWidthL);
+  margin: 0 auto;
+}
 
-  /* LOGIN FORM */
-  
-  .login-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: auto;
-  }
+.page {
+  min-height: calc(100vh - (6rem + 4rem));
+}
 
-  .login-header {
-    padding-bottom: var(--spaceS);
-  }
+/* LOGIN FORM/PAGE */
 
-  .login-text {
-    padding-bottom: var(--spaceXL);
-  }
-  
-  .login-button {
-    justify-content: center;
-    padding-top: var(--spaceXL);
-    padding-bottom: var(--spaceL);
-  }
+.bg-sand {
+  background-color: var(--primaryB100);
+}
 
-  .login-input {
-    padding-top: var(--spaceL);
-  }
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.login-header {
+  padding-bottom: var(--spaceS);
+}
+
+.login-text {
+  padding-bottom: var(--spaceXL);
+}
+
+.login-button {
+  justify-content: center;
+  padding-top: var(--spaceXL);
+  padding-bottom: var(--spaceL);
+}
+
+.login-input {
+  padding-top: var(--spaceL);
+}

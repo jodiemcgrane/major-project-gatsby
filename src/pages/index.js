@@ -15,9 +15,15 @@ const WelcomePage = ({ location }) => {
     : `/app/${routeState.redirect}`
 
   return (
-    <div className="row">
+    <div className="row bg-sand">
       <div className="col-md-6">
-        <StaticImage src='../assets/images/hero-img.jpg' alt="Hero" />
+        <StaticImage
+          src="../assets/images/hero-img.jpg"
+          alt="Hero"
+          as="section"
+          placeholder="blurred"
+          layout="constrained"
+        />
       </div>
       <div className="col-md-6">
         <LoginForm redirect={redirect} />
