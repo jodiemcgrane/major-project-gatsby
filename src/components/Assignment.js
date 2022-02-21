@@ -1,5 +1,12 @@
 import React from "react"
 
+import {
+  FormControl,
+  Input,
+  Button,
+  Typography,
+} from "@atlas-design-system/react"
+
 const Assignment = ({
   id,
   title,
@@ -10,7 +17,7 @@ const Assignment = ({
 }) => {
   return (
     <div>
-      <h3>{title}</h3>
+      <Typography variant="displayText4">{title}</Typography>
       {description.map(description => {
         return <p key={description.id}>{description.text}</p>
       })}
