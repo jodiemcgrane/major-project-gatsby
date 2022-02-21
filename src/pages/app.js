@@ -20,13 +20,15 @@ const App = ({ location }) => {
   }, [isAuthenticated, redirect])
 
   return (
-    <Layout>
-      <Router basepath="/app" className="page">
-        <AssignmentsPage path="/assignments" />
-        <JournalsPage path="/journals" />
-        <Home default />
-      </Router>
-    </Layout>
+    <div className="atls">
+      <Layout>
+        <Router basepath="/app" className="page">
+          <AssignmentsPage path="/assignments" />
+          <JournalsPage path="/journals" />
+          <Home default />
+        </Router>
+      </Layout>
+    </div>
   )
 }
 export default App

@@ -5,13 +5,20 @@
 @import "@atlas-design-system/core/dist/styles/partials/fonts.css";
 
 @import "@atlas-design-system/core/dist/styles/partials/buttons.css";
+@import "@atlas-design-system/core/dist/styles/partials/button-group.css";
+
+@import "@atlas-design-system/core/dist/styles/partials/header.css";
 @import "@atlas-design-system/core/dist/styles/partials/footer.css";
+
 @import "@atlas-design-system/core/dist/styles/partials/form-control.css";
 @import "@atlas-design-system/core/dist/styles/partials/form.css";
-@import "@atlas-design-system/core/dist/styles/partials/header.css";
+@import "@atlas-design-system/core/dist/styles/partials/input.css";
+
 @import "@atlas-design-system/core/dist/styles/partials/link.css";
 @import "@atlas-design-system/core/dist/styles/partials/link-group.css";
-@import "@atlas-design-system/core/dist/styles/partials/input.css";
+
+@import "@atlas-design-system/core/dist/styles/partials/card.css";
+@import "@atlas-design-system/core/dist/styles/partials/card-list.css";
 
 /* PAGES */
 
@@ -49,4 +56,14 @@
 .login-button {
   justify-content: center;
   padding: var(--spaceXL) 0;
+}
+
+/* HOME PAGE */
+
+.featured-journals-header {
+  padding: var(--spaceXXL) 0;
+}
+
+.featured-card-text {
+  padding: var(--spaceM) 0;
 }
