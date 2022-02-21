@@ -15,18 +15,34 @@ const WelcomePage = ({ location }) => {
     : `/app/${routeState.redirect}`
 
   return (
-    <div className="row bg-sand atls">
-      <div className="col-md-6">
-        <StaticImage
-          src="../assets/images/hero-img.jpg"
-          alt="Hero"
-          as="section"
-          placeholder="blurred"
-          layout="constrained"
-        />
+    <div className="atls row bg-sand">
+      <div className="col-xs col-md-6">
+        <div className="box">
+          <StaticImage
+            src="../assets/images/hero-img.jpg"
+            alt="Hero"
+            as="section"
+            placeholder="blurred"
+            layout="constrained"
+          />
+        </div>
       </div>
-      <div className="col-md-6">
-        <LoginForm redirect={redirect} />
+      <div className="row center-xs middle-xs col-xs col-md-6">
+        <div className="col-md-6">
+          <div className="box">
+            <div className="login-logo">
+              <StaticImage
+                src="../assets/images/travelport-logo.png"
+                alt="Logo"
+                as="section"
+                placeholder="blurred"
+                layout="constrained"
+              />
+            </div>
+
+            <LoginForm redirect={redirect} />
+          </div>
+        </div>
       </div>
     </div>
   )

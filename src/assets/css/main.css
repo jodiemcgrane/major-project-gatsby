@@ -13,6 +13,8 @@
 @import "@atlas-design-system/core/dist/styles/partials/link-group.css";
 @import "@atlas-design-system/core/dist/styles/partials/input.css";
 
+/* PAGES */
+
 .page {
   width: 90vw;
   max-width: var(--screenWidthL);
@@ -29,11 +31,8 @@
   background-color: var(--primaryB100);
 }
 
-.login-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.login-logo {
+  padding-bottom: var(--spaceXXL);
 }
 
 .login-header {
@@ -44,12 +43,11 @@
   padding-bottom: var(--spaceXL);
 }
 
-.login-button {
-  justify-content: center;
-  padding-top: var(--spaceXL);
-  padding-bottom: var(--spaceL);
-}
-
 .login-input {
   padding-top: var(--spaceL);
+}
+
+.login-button {
+  justify-content: center;
+  padding: var(--spaceXL) 0;
 }

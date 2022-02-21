@@ -37,46 +37,42 @@ const LoginForm = ({ redirect }) => {
   }
 
   return (
-    <div className="login-form">
-      <div className="col-md-6">
-        <div className="row login-header">
-          <Typography variant="displayText3">Login</Typography>
-        </div>
+    <div>
+      <div className="row login-header">
+        <Typography variant="displayText3">Login</Typography>
+      </div>
 
-        <div className="row login-text">
-          <Typography variant="displayText7">
-            Please log in with your credentials.
-          </Typography>
-        </div>
+      <div className="row login-text">
+        <Typography variant="displayText7">
+          Please log in with your credentials.
+        </Typography>
+      </div>
 
-        <FormControl label="Email">
-          <Input name="identifier" onChange={handleForm} />
+      <FormControl label="Email">
+        <Input name="identifier" onChange={handleForm} />
+      </FormControl>
+
+      <div className="login-input">
+        <FormControl label="Password">
+          <Input type="password" name="password" onChange={handleForm} />
         </FormControl>
+      </div>
 
-        <div className="login-input">
-          <FormControl label="Password">
-            <Input type="password" name="password" onChange={handleForm} />
-          </FormControl>
-        </div>
+      <div className="row login-button">
+        <Button
+          appearance="primary"
+          size="large"
+          type="submit"
+          onClick={submitForm}
+        >
+          Login
+        </Button>
+      </div>
 
-        <div className="row login-button">
-          <Button
-            appearance="primary"
-            size="large"
-            type="submit"
-            onClick={submitForm}
-          >
-            Login
-          </Button>
-        </div>
-
-        <div className="row">
-          <Link to="/">
-            <Typography variant="contentText2">
-              Forgot your password?
-            </Typography>
-          </Link>
-        </div>
+      <div className="row">
+        <Link to="/">
+          <Typography variant="bodyContent1">Forgot your password?</Typography>
+        </Link>
       </div>
     </div>
   )
