@@ -17,7 +17,6 @@
 
 .page {
   width: 90vw;
-  max-width: var(--screenWidthL);
   margin: 0 auto;
 }
 

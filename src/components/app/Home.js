@@ -1,10 +1,40 @@
-import React from 'react'
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
-const Home = () => (
-  <>
-    <h1>Home Page</h1>
-    <p>This is a protected Home page</p>
-  </>
-)
+//Components
+import { Typography } from "@atlas-design-system/react"
 
-export default Home 
+const query = graphql`
+  {
+    allStrapiJournal(filter: { featured: { eq: true } }) {
+      nodes {
+        id
+        title
+        about
+        featured
+        published_at
+        user {
+          username
+        }
+      }
+    }
+  }
+`
+
+const Home = () => {
+  const data = useStaticQuery(query)
+  const journals = data.allStrapiJournal.nodes
+
+  return (
+    <div>
+      <div className="row center-xs middle-xs bg-sand">
+        <Typography variant="displayText3">Featured Journals</Typography>
+      </div>
+      <div className="row bg-sand">
+        
+      </div>
+    </div>
+  )
+}
+
+export default Home
