@@ -22,10 +22,10 @@ const App = ({ location }) => {
   return (
     <div className="atls">
       <Layout>
-        <Router basepath="/app" className="page">
-          <AssignmentsPage path="/assignments" />
-          <JournalsPage path="/journals" />
-          <Home default />
+        <Router basepath="/app">
+          <AssignmentsPage path="/assignments" className="page" />
+          <JournalsPage path="/journals" className="page" />
+          <Home default state={state} />
         </Router>
       </Layout>
     </div>

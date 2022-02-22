@@ -31,6 +31,7 @@ const LoginForm = ({ redirect }) => {
     })
       .then(response => {
         console.log(response.jwt)
+        console.log(state)
         navigate(redirect)
       })
       .catch(err => console.log(err))

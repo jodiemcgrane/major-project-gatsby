@@ -31,14 +31,12 @@
   min-height: calc(100vh - (6rem + 4rem));
 }
 
-/* REMOVE LINK STLYING */
-
-
-/* LOGIN FORM/PAGE */
-
 .bg-sand {
   background-color: var(--primaryB100);
+  height: 400px;
 }
+
+/* LOGIN FORM/PAGE */
 
 .login-logo {
   padding-bottom: var(--spaceXXL);
@@ -62,6 +60,24 @@
 }
 
 /* HOME PAGE */
+
+.home-page {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.home-hero {
+  background-color: var(--primaryB200);
+}
+
+.home-hero-header {
+  padding-top: var(--spaceXXL);
+  padding-bottom: var(--spaceXL);
+}
+
+.home-hero-button {
+  padding-top: var(--spaceXL);
+}
 
 .featured-journals-header {
   padding: var(--spaceXXL) 0;

@@ -1,9 +1,6 @@
 import React from "react"
 
 import {
-  FormControl,
-  Input,
-  Button,
   Typography,
 } from "@atlas-design-system/react"
 
