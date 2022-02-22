@@ -28,15 +28,11 @@ const Home = () => {
 
   return (
     <div>
-      <div className="row center-xs middle-xs bg-sand featured-journals-header">
+      <div className="row center-xs middle-xs featured-journals-header">
         <Typography variant="displayText3">Featured Journals</Typography>
       </div>
-      <div className="row bg-sand">
-        <div className="col-xs col-md-4">
-          <div className="box">
+      <div className="row">
             <FeaturedJournalCard journals={journals} />
-          </div>
-        </div>
       </div>
     </div>
   )

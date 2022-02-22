@@ -12,36 +12,35 @@ import {
 
 const FeaturedJournalCard = ({ journals }) => {
   return (
-    <div>
+    <>
       {journals.map(journal => {
         return (
-          <Card
-            key={journal.id}
-            onClick={function S() {
-              ;<Link to="/"></Link>
-            }}
-            actionButtons={
-              <ButtonGroup>
-                <Button
-                  appearance="primary"
-                  onClick={function S() {
-                    ;<Link to="/"></Link>
-                  }}
-                >
-                  See More
-                </Button>
-              </ButtonGroup>
-            }
-            illustration={<NotesIllustration />}
-          >
-            <Typography variant="displayText6">{journal.title}</Typography>
-            <div className="featured-card-text">
-              <Typography variant="contentText1">{journal.about}</Typography>
+          <div className="col-xs col-md-4">
+            <div className="box">
+              <Card
+                key={journal.id}
+                onClick={function S() {}}
+                actionButtons={
+                  <ButtonGroup>
+                    <Button appearance="primary" onClick={function S() {}}>
+                      See More
+                    </Button>
+                  </ButtonGroup>
+                }
+                illustration={<NotesIllustration />}
+              >
+                <Typography variant="displayText6">{journal.title}</Typography>
+                <div className="featured-journals-card-text">
+                  <Typography variant="contentText1">
+                    {journal.about}
+                  </Typography>
+                </div>
+              </Card>
             </div>
-          </Card>
+          </div>
         )
       })}
-    </div>
+    </>
   )
 }
 

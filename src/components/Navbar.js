@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 //Components
-import { Header } from "@atlas-design-system/react"
+import { Header, Button } from "@atlas-design-system/react"
 
 const Navbar = () => {
   return (
