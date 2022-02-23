@@ -9,13 +9,13 @@ const Navbar = () => {
     <Header
       rightNavigation={
         <>
-          <Link style={{ textDecoration: "none" }} to="/app">
+          <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app">
             Home
           </Link>
-          <Link style={{ textDecoration: "none" }} to="/app/assignments">
+          <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app/assignments">
             Assignments
           </Link>
-          <Link style={{ textDecoration: "none" }} to="/app/journals">
+          <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app/journals">
             Journals
           </Link>
         </>
