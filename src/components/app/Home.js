@@ -31,46 +31,36 @@ const Home = ({ state }) => {
 
   return (
     <>
-      <div className="row home-hero">
+      <div className="home-hero">
         <div className="home-page">
           <div className="row">
-            <div className="col-xs col-md-6">
-              <div className="row home-hero-header">
+            <div className="col-md-6 home-hero-section-left">
+              <div className="home-hero-header">
                 <Typography variant="displayText2">
-                  Welcome, {state.user.username}
+                  Hi, {state.user.username}
                 </Typography>
               </div>
-            </div>
-
-            <div className="col-xs col-md-7">
-              <div className="row">
+              <div className="home-hero-text">
                 <Typography variant="displayText5">
                   I'm baby man bun chartreuse 8-bit, hashtag XOXO literally
                   austin locavore ramps adaptogen messenger bag.
                 </Typography>
               </div>
+              <Button appearance="primary" size="large">
+                View Assignments
+              </Button>
             </div>
-
-            <div className="col-xs col-md-6">
-              <div className="row home-hero-button">
-                <Button appearance="primary" size="large">
-                  View Assignments
-                </Button>
-              </div>
+            <div className="col-md-6">
+            {/* <StaticImage
+                src="../assets/images/travelport-logo.png"
+                alt="Logo"
+                as="section"
+                placeholder="blurred"
+                layout="constrained"
+              /> */}
             </div>
           </div>
         </div>
-        {/* <div className="row col-xs col-md-6">
-          <div className="box">
-            <StaticImage
-              src="../assets/images/hero-img.jpg"
-              alt="Hero"
-              as="section"
-              placeholder="blurred"
-              layout="constrained"
-            />
-          </div>
-        </div> */}
       </div>
 
       {/* FEATURED JOURNALS */}

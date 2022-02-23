@@ -33,7 +33,6 @@
 
 .bg-sand {
   background-color: var(--primaryB100);
-  height: 400px;
 }
 
 /* LOGIN FORM/PAGE */
@@ -61,18 +60,30 @@
 
 /* HOME PAGE */
 
+.home-hero {
+  background-color: var(--primaryB200);
+  padding-bottom: 0;
+}
+
 .home-page {
-  width: 90vw;
+  height: auto;
+  width: 100%;
+  max-width: var(--screenWidthL);
+  min-width: var(--screenWidthL);
   margin: 0 auto;
 }
 
-.home-hero {
-  background-color: var(--primaryB200);
+.home-hero-section-left {
+  padding-top: var(--spaceXXL);
 }
 
 .home-hero-header {
-  padding-top: var(--spaceXXL);
-  padding-bottom: var(--spaceXL);
+  padding-bottom: var(--spaceM);
+  padding-right: var(--spaceS);
+}
+
+.home-hero-text {
+  margin: var(--spaceL) 0;
 }
 
 .home-hero-button {
