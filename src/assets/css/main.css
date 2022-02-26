@@ -67,7 +67,6 @@
 
 .home-hero {
   background-color: var(--primaryB200);
-  padding-bottom: 0;
 }
 
 .home-page {
@@ -120,6 +119,10 @@
 
 .assignments-card {
   margin-bottom: var(--spaceXL);
+}
+
+.assignments-card-button {
+  margin-right: var(--spaceM);
 }
 
 .assignments-card-text {

@@ -33,7 +33,7 @@ const Home = ({ state }) => {
     <>
       <div className="home-hero">
         <div className="home-page">
-          <div className="row">
+          <div className="row between-xs">
             <div className="col-md-6 home-hero-section-left">
               <div className="home-hero-header">
                 <Typography variant="displayText2">
@@ -50,13 +50,13 @@ const Home = ({ state }) => {
                 View Assignments
               </Button>
             </div>
-            <div className="col-md-6">
-              {/* <StaticImage
-                src="../assets/images/travelport-employees.png"
+            <div className="col-md-5">
+              <StaticImage
+                src="../../assets/images/pineapple-man-img.jpeg"
                 alt="Home Hero"
                 placeholder="blurred"
                 layout="constrained"
-              /> */}
+              />
             </div>
           </div>
         </div>
