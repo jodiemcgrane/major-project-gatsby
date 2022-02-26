@@ -20,6 +20,9 @@
 @import "@atlas-design-system/core/dist/styles/partials/card.css";
 @import "@atlas-design-system/core/dist/styles/partials/card-list.css";
 
+@import "@atlas-design-system/core/dist/styles/partials/icon-card.css";
+@import "@atlas-design-system/core/dist/styles/partials/icons.css";
+
 @import "@atlas-design-system/core/dist/styles/partials/lozenge.css";
 
 /* PAGES */
@@ -108,7 +111,7 @@
 }
 
 .assignments-page-introduction {
-  padding-bottom: var(--spaceXXL);
+  padding-bottom: var(--spaceXL);
 }
 
 .assignment-row {

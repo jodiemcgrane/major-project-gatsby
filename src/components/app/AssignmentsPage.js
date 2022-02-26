@@ -6,6 +6,7 @@ import Assignments from "../Assignments"
 
 //Atlas Components
 import { Typography } from "@atlas-design-system/react"
+import { IconCard, InformationV2Icon } from "@atlas-design-system/react"
 
 const query = graphql`
   {
@@ -44,7 +45,7 @@ const AssignmentsPage = () => {
           </Typography>
         </div>
       </div>
-      <div className="row assignments-page-introduction">
+      <div className="row between-xs assignments-page-introduction">
         <div className="col-md-6">
           <Typography variant="displayText5">
             Literally shoreditch yr try-hard four dollar toast. Ennui man bun
@@ -52,6 +53,14 @@ const AssignmentsPage = () => {
             meggings typewriter letterpress post-ironic.
           </Typography>
         </div>
+        <div className="col-sm-3">
+        <IconCard
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+          heading="Need tips on writing?"
+          icon="InformationV2Icon"
+          onClick={function S() {}}
+        />
+      </div>
       </div>
 
       <Assignments assignments={assignments} />
