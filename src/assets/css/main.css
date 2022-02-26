@@ -20,6 +20,8 @@
 @import "@atlas-design-system/core/dist/styles/partials/card.css";
 @import "@atlas-design-system/core/dist/styles/partials/card-list.css";
 
+@import "@atlas-design-system/core/dist/styles/partials/lozenge.css";
+
 /* PAGES */
 
 .page {
@@ -95,5 +97,28 @@
 }
 
 .featured-journals-card-text {
+  padding: var(--spaceM) 0;
+}
+
+/* ASSIGNMENTS PAGE */
+
+.assignments-page-header {
+  padding-top: var(--spaceXXL);
+  padding-bottom: var(--spaceL);
+}
+
+.assignments-page-introduction {
+  padding-bottom: var(--spaceXXL);
+}
+
+.assignment-row {
+  padding-left: var(--spaceM);
+}
+
+.assignments-card {
+  margin-bottom: var(--spaceXL);
+}
+
+.assignments-card-text {
   padding: var(--spaceM) 0;
 }

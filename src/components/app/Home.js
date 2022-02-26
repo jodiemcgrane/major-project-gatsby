@@ -51,12 +51,12 @@ const Home = ({ state }) => {
               </Button>
             </div>
             <div className="col-md-6">
-              <StaticImage
+              {/* <StaticImage
                 src="../assets/images/travelport-employees.png"
                 alt="Home Hero"
                 placeholder="blurred"
                 layout="constrained"
-              />
+              /> */}
             </div>
           </div>
         </div>
