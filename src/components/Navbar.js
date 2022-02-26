@@ -2,23 +2,37 @@ import React from "react"
 import { Link } from "gatsby"
 
 //Components
-import { Header, Button } from "@atlas-design-system/react"
+import { Header } from "@atlas-design-system/react"
 
 const Navbar = () => {
   return (
     <Header
-      rightNavigation={
+      leftNavigation={
         <>
           <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app">
             Home
           </Link>
-          <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app/assignments">
+          <Link
+            style={{ textDecoration: "none", color: "#F7E4CB" }}
+            to="/app/assignments"
+          >
             Assignments
           </Link>
-          <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app/journals">
+          <Link
+            style={{ textDecoration: "none", color: "#F7E4CB" }}
+            to="/app/journals"
+          >
             Journals
           </Link>
         </>
+      }
+      rightNavigation={
+        <Link
+          style={{ textDecoration: "none", color: "#F7E4CB" }}
+          to="/app"
+        >
+          Resources
+        </Link>
       }
     />
   )
