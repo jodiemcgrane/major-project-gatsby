@@ -25,6 +25,7 @@ const query = graphql`
           id
           submitted
         }
+        slug
       }
       totalCount
     }
