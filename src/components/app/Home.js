@@ -68,7 +68,7 @@ const Home = ({ state }) => {
         <div className="row center-xs middle-xs featured-journals-header">
           <Typography variant="displayText3">Featured Journals</Typography>
         </div>
-        <div className="row">
+        <div className="row center-xs">
           <FeaturedJournalCard journals={journals} />
         </div>
         <div className="row center-xs middle-xs featured-journals-header">

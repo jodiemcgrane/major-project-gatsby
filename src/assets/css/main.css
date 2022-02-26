@@ -102,6 +102,10 @@
   padding: var(--spaceM) 0;
 }
 
+.featured-journals-card-space {
+  margin-right: var(--spaceL);
+}
+
 /* ASSIGNMENTS PAGE */
 
 .assignments-page-header {
