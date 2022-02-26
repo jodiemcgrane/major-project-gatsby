@@ -10,13 +10,20 @@ const query = graphql`
       nodes {
         id
         title
+        introduction
         description {
           id
           text
         }
-        information
         dueDate
         published_at
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+            }
+          }
+        }
       }
     }
   }
@@ -27,9 +34,9 @@ const AssignmentsPage = () => {
   const assignments = data.allStrapiAssignment.nodes
 
   return (
-    <main className="page">
+    <div className="page">
       <Assignments assignments={assignments} />
-    </main>
+    </div>
   )
 }
 

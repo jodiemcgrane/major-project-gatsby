@@ -15,29 +15,24 @@ const FeaturedJournalCard = ({ journals }) => {
     <>
       {journals.map(journal => {
         return (
-          <div className="col-xs col-md-4">
-            <div className="box">
-              <Card
-                key={journal.id}
-                onClick={function S() {}}
-                actionButtons={
-                  <ButtonGroup>
-                    <Button appearance="primary" onClick={function S() {}}>
-                      See More
-                    </Button>
-                  </ButtonGroup>
-                }
-                illustration={<NotesIllustration />}
-              >
-                <Typography variant="displayText6">{journal.title}</Typography>
-                <div className="featured-journals-card-text">
-                  <Typography variant="contentText1">
-                    {journal.about}
-                  </Typography>
-                </div>
-              </Card>
+          <Card
+            key={journal.id}
+            onClick={function S() {}}
+            actionButtons={
+              <ButtonGroup>
+                <Button appearance="primary" onClick={function S() {}}>
+                  See More
+                </Button>
+              </ButtonGroup>
+            }
+            illustration={<NotesIllustration />}
+            className="col-xs-12 col-sm-4"
+          >
+            <Typography variant="displayText6">{journal.title}</Typography>
+            <div className="featured-journals-card-text">
+              <Typography variant="contentText1">{journal.about}</Typography>
             </div>
-          </div>
+          </Card>
         )
       })}
     </>
