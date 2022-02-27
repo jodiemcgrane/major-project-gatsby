@@ -42,8 +42,8 @@ const Home = ({ state }) => {
               </div>
               <div className="home-hero-text">
                 <Typography variant="displayText5">
-                  I'm baby man bun chartreuse 8-bit, hashtag XOXO literally
-                  austin locavore ramps adaptogen messenger bag.
+                  Ready to create more journals for your development portfolio
+                  as an intern of Travelport? Get started now.
                 </Typography>
               </div>
               <Button appearance="primary" size="large">
