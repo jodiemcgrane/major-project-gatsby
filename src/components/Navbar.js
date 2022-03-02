@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 //Components
-import { Header, ArrowDownIcon } from "@atlas-design-system/react"
+import { Header, ArrowDownIcon, Dropdown } from "@atlas-design-system/react"
 
 const Navbar = () => {
   return (
@@ -26,14 +26,13 @@ const Navbar = () => {
           </Link>
         </>
       }
-      rightNavigation={
-        <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app">
-          Resources
-          {/* <div className="header-arrow-down-icon">
-            <ArrowDownIcon />
-          </div> */}
-        </Link>
-      }
+      // rightNavigation={
+      //   <Dropdown content={<Link>Link 1</Link>}>
+      //     <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app">
+      //       Resources
+      //     </Link>
+      //   </Dropdown>
+      // }
     />
   )
 }
