@@ -41,7 +41,7 @@ const AssignmentsPage = () => {
     <div className="page">
       <div className="row assignments-page-header">
         <div className="col-md-5">
-          <Typography variant="displayText3">
+          <Typography variant="displayText4">
             Assignments ({total.totalCount})
           </Typography>
         </div>

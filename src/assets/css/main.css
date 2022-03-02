@@ -117,11 +117,11 @@
 
 .assignments-page-header {
   padding-top: var(--spaceXXL);
-  padding-bottom: var(--spaceL);
+  padding-bottom: var(--spaceM);
 }
 
 .assignments-page-introduction {
-  padding-bottom: var(--spaceL);
+  padding-bottom: var(--spaceM);
 }
 
 .assignment-row {
