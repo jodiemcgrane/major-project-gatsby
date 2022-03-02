@@ -36,7 +36,7 @@ const Home = ({ state }) => {
           <div className="row between-xs">
             <div className="col-md-6 home-hero-section-left">
               <div className="home-hero-header">
-                <Typography variant="displayText2">
+                <Typography variant="displayText1">
                   Hi, {state.user.username}
                 </Typography>
               </div>
