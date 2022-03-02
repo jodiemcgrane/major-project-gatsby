@@ -58,7 +58,7 @@ const AssignmentsPage = () => {
         <IconCard
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
           heading="Need tips on writing?"
-          icon="InformationV2Icon"
+          icon={<InformationV2Icon />}
           onClick={function S() {}}
         />
       </div>

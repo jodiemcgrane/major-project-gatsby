@@ -25,6 +25,13 @@
 
 @import "@atlas-design-system/core/dist/styles/partials/lozenge.css";
 
+/* HEADER */
+
+/* .header-arrow-down-icon {
+  padding-top: var(--spaceS);
+  padding-right: var(--spaceS);
+} */
+
 /* PAGES */
 
 .page {
