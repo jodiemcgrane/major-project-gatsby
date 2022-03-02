@@ -121,7 +121,7 @@
 }
 
 .assignments-page-introduction {
-  padding-bottom: var(--spaceXL);
+  padding-bottom: var(--spaceL);
 }
 
 .assignment-row {
@@ -138,6 +138,10 @@
 
 .assignments-card-text {
   padding: var(--spaceM) 0;
+}
+
+.assignment-button {
+  margin-left: var(--spaceM);
 }
 
 /* SINGLE ASSIGNMENT PAGE */
