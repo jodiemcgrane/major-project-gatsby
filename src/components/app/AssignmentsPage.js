@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 //Components
 import Assignments from "../Assignments"

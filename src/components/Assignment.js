@@ -28,7 +28,7 @@ const Assignment = ({
         actionButtons={
           <ButtonGroup>
             <Link
-              to={`/assignments/${slug}`}
+              to={`/app/${slug}`}
               style={{ textDecoration: "none" }}
             >
               <Button appearance="primary" onClick={function S() {}}>
