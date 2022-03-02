@@ -26,7 +26,7 @@ const FeaturedJournalCard = ({ journals }) => {
               </ButtonGroup>
             }
             illustration={<NotesIllustration />}
-            className="col-xs-12 col-sm-3 featured-journals-card-space"
+            className="col-xs col-md-5 featured-journals-card-space"
           >
             <Typography variant="displayText6">{journal.title}</Typography>
             <div className="featured-journals-card-text">

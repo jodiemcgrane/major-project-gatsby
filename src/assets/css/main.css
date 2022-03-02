@@ -111,6 +111,7 @@
 
 .featured-journals-card-space {
   margin-right: var(--spaceL);
+  margin-bottom: var(--spaceL);
 }
 
 /* ASSIGNMENTS PAGE */
