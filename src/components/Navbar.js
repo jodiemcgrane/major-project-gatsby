@@ -9,7 +9,7 @@ const Navbar = () => {
     <Header
       leftNavigation={
         <>
-          <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app/home">
+          <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app">
             Home
           </Link>
           <Link

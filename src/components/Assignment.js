@@ -28,7 +28,7 @@ const Assignment = ({
         key={id}
         actionButtons={
           <ButtonGroup>
-            <Link to={`/app/${slug}`} style={{ textDecoration: "none" }}>
+            <Link to={`/${slug}`} style={{ textDecoration: "none" }}>
               <Button appearance="primary" onClick={function S() {}}>
                 View Assignment
               </Button>

@@ -7,7 +7,6 @@ import Layout from "../components/layout"
 import Home from "../components/app/Home"
 import AssignmentsPage from "../components/app/AssignmentsPage"
 import JournalsPage from "../components/app/JournalsPage"
-import SingleAssignmentPage from "../components/app/SingleAssignmentPage"
 
 //Hooks
 import useAuth from "../hooks/useAuth"
@@ -27,7 +26,6 @@ const App = ({ location }) => {
         <Router basepath="/app">
           <Home default state={state} />
           <AssignmentsPage path="/assignments" className="page" />
-          <SingleAssignmentPage path="/:slug" className="page" />
           <JournalsPage path="/journals" className="page" />
         </Router>
       </Layout>
