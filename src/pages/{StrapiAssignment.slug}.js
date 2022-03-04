@@ -4,6 +4,9 @@ import { graphql } from "gatsby"
 //Images
 import { StaticImage } from "gatsby-plugin-image"
 
+//MomentJS
+import moment from "moment"
+
 //Components
 import Layout from "../components/layout"
 
@@ -92,7 +95,7 @@ const AssignmentTemplate = ({ data }) => {
                   </div>
                   <div className="assignment-due-date">
                     <Typography variant="contentText2">
-                      Due: {assignment.dueDate}
+                      {moment(assignment.dueDate).format("LLL")}
                     </Typography>
                   </div>
                 </div>
