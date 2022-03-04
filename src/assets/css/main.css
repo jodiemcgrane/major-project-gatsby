@@ -147,25 +147,32 @@
 
 /* SINGLE ASSIGNMENT PAGE */
 
-.assignment-page {
+/* .assignment-page {
   height: auto;
   width: 75%;
   max-width: var(--screenWidthXL);
   min-width: var(--screenWidthXL);
   margin: 0 auto;
+} */
+
+.assignment-heading {
+  padding-top: var(--spaceS);
+  padding-left: var(--spaceM);
+}
+
+.assignment-intro {
+  padding-top: var(--spaceS);
+  padding-bottom: var(--spaceS);
+  padding-left: var(--spaceM);
+  padding-right: var(--spaceXXL);
+}
+
+.assignment-due-date {
+  padding-right: var(--spaceS);
 }
 
 .back-to-assignments-button {
   padding-top: var(--spaceXXL);
-  padding-bottom: var(--spaceXL);
-}
-
-/* .single-assignment-page {
-  justify-content: center;
-} */
-
-.assignment-description-container {
-  padding-top: var(--spaceXL);
   padding-bottom: var(--spaceXXL);
 }
 
@@ -175,17 +182,6 @@
   column-gap: 1rem;
   align-items: center;
   margin-top: var(--spaceM);
-  padding-left: 4rem;
-}
-
-.assignment-button {
-  padding-left: 4rem;
-}
-
-.assignment-image {
-  height: auto;
-  width: 100%;
-  max-width: var(--screenWidthXS);
-  min-width: var(--screenWidthXS);
-  margin: 0 var(--spaceL);
+  padding-left: var(--spaceXL);
+  padding-right: var(--spaceXXL);
 }
