@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
 
 //Components
 import Assignments from "../Assignments"
@@ -16,6 +15,9 @@ const query = graphql`
         id
         title
         introduction
+        img {
+          url
+        }
         description {
           id
           text

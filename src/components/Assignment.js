@@ -15,6 +15,7 @@ const Assignment = ({
   id,
   title,
   introduction,
+  img: { url },
   description,
   dueDate,
   published_at,
@@ -27,10 +28,7 @@ const Assignment = ({
         key={id}
         actionButtons={
           <ButtonGroup>
-            <Link
-              to={`/app/${slug}`}
-              style={{ textDecoration: "none" }}
-            >
+            <Link to={`/app/${slug}`} style={{ textDecoration: "none" }}>
               <Button appearance="primary" onClick={function S() {}}>
                 View Assignment
               </Button>
@@ -39,7 +37,11 @@ const Assignment = ({
               if (journal.submitted === true) {
                 return (
                   <>
-                    <Button className="assignment-button" appearance="secondary" onClick={function S() {}}>
+                    <Button
+                      className="assignment-button"
+                      appearance="secondary"
+                      onClick={function S() {}}
+                    >
                       View Journal
                     </Button>
                   </>
@@ -47,7 +49,11 @@ const Assignment = ({
               } else if (journal.submitted === false) {
                 return (
                   <>
-                    <Button className="assignment-button" appearance="secondary" onClick={function S() {}}>
+                    <Button
+                      className="assignment-button"
+                      appearance="secondary"
+                      onClick={function S() {}}
+                    >
                       Continue Journal
                     </Button>
                   </>
@@ -55,7 +61,11 @@ const Assignment = ({
               } else {
                 return (
                   <>
-                    <Button className="assignment-button" appearance="secondary" onClick={function S() {}}>
+                    <Button
+                      className="assignment-button"
+                      appearance="secondary"
+                      onClick={function S() {}}
+                    >
                       Start Journal
                     </Button>
                   </>
@@ -64,7 +74,7 @@ const Assignment = ({
             })}
           </ButtonGroup>
         }
-        image="https://assets.gettyimages.com/bf-boulder-whitelabelbucket-getty-prod/9993rcbjms9pw65wsrts8pqx/v/1015924856/original/Travelport%20Illustrations_Contact.png"
+        image={url}
         imageAlt={title}
         layout="horizontal"
         className="assignments-card"
