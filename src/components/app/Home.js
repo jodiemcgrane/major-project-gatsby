@@ -6,6 +6,9 @@ import { StaticImage } from "gatsby-plugin-image"
 
 //Components
 import FeaturedJournalCard from "../FeaturedJournalCard"
+import HomeResources from "../HomeResources"
+
+//Atlas Components
 import { Typography, Button } from "@atlas-design-system/react"
 
 const query = graphql`
@@ -74,6 +77,7 @@ const Home = ({ state }) => {
         <div className="row center-xs middle-xs featured-journals-header">
           <Typography variant="displayText3">Helpful Resources</Typography>
         </div>
+        <div><HomeResources /></div>
       </div>
     </>
   )
