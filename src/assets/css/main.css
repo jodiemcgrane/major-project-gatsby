@@ -184,15 +184,28 @@
 
 /* JOURNALS PAGE */
 
+.journals-display {
+  justify-content: center;
+}
+
 .journals-page-header {
   padding-top: var(--spaceXXL);
   padding-bottom: var(--spaceM);
 }
 
 .journals-page-introduction {
-  padding-bottom: var(--spaceM);
+  padding-bottom: var(--spaceL);
 }
 
 .journals-row {
   padding-left: var(--spaceM);
+}
+
+.journals-about {
+  padding: var(--spaceM) 0;
+  padding-right: var(--spaceM);
+}
+
+.journals-card {
+  margin-bottom: var(--spaceXXL);
 }

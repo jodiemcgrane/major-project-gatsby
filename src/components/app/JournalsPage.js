@@ -53,7 +53,7 @@ const JournalsPage = () => {
           </Typography>
         </div>
       </div>
-      <div className="row journals-row">
+      <div className="row journals-row journals-display">
         <div className="col-md-4 col-md-9">
           <Journals journals={journals} />
         </div>
