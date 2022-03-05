@@ -26,7 +26,7 @@ const InternshipResource = () => {
           </Typography>
         </div>
         <div className="row bottom-xs home-resources-button">
-          <Button appearance="secondary">Learn More</Button>
+          <Button appearance="secondary" size="large">Learn More</Button>
         </div>
       </div>
       <div className="col-md-4">
