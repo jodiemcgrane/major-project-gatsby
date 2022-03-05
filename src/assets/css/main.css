@@ -114,6 +114,33 @@
   margin-bottom: var(--spaceL);
 }
 
+/* HOME RESOURCES */
+
+.home-resources-section {
+  padding-bottom: 50px;
+}
+
+.border {
+  border-bottom: 1px solid var(--primaryA300);
+  margin: var(--spaceXL) 0;
+}
+
+.home-resources-heading {
+  padding-bottom: var(--spaceS);
+}
+
+.home-resources-sub-heading {
+  padding-right: var(--spaceS);
+}
+
+.home-resources-text {
+  padding: var(--spaceM) 0;
+}
+
+.home-resources-button {
+  margin-top: 80px;
+}
+
 /* ASSIGNMENTS PAGE */
 
 .assignments-page-header {
