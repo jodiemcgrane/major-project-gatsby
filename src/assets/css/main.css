@@ -125,7 +125,7 @@
   padding-bottom: var(--spaceM);
 }
 
-.assignment-row {
+.assignments-row {
   padding-left: var(--spaceM);
 }
 
@@ -146,14 +146,6 @@
 }
 
 /* SINGLE ASSIGNMENT PAGE */
-
-/* .assignment-page {
-  height: auto;
-  width: 75%;
-  max-width: var(--screenWidthXL);
-  min-width: var(--screenWidthXL);
-  margin: 0 auto;
-} */
 
 .assignment-heading {
   padding-top: var(--spaceS);
@@ -184,4 +176,23 @@
   margin-top: var(--spaceM);
   padding-left: var(--spaceXL);
   padding-right: var(--spaceXXL);
+}
+
+.assignment-card {
+  padding-bottom: var(--spaceXXL);
+}
+
+/* JOURNALS PAGE */
+
+.journals-page-header {
+  padding-top: var(--spaceXXL);
+  padding-bottom: var(--spaceM);
+}
+
+.journals-page-introduction {
+  padding-bottom: var(--spaceM);
+}
+
+.journals-row {
+  padding-left: var(--spaceM);
 }

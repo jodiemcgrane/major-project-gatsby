@@ -66,7 +66,7 @@ const AssignmentsPage = () => {
         </div>
       </div>
 
-      <div className="row assignment-row">
+      <div className="row assignments-row">
         <div className="col-md-4 col-md-7">
           <Assignments assignments={assignments} />
         </div>

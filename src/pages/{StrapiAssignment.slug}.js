@@ -39,7 +39,7 @@ const AssignmentTemplate = ({ data }) => {
             </div>
           </div>
           <div className="row between-xs">
-            <div className="col-xs col-md-12">
+            <div className="col-xs col-md-12 assignment-card">
               <Card
                 layout="horizontal"
                 image={assignment.img.url}
