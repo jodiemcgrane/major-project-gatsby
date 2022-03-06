@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import { navigate } from "gatsby"
 import { graphql } from "gatsby"
 
 //Images
@@ -9,12 +10,12 @@ import moment from "moment"
 
 //Components
 import Layout from "../components/layout"
-import CreateJournal from "../components/CreateJournal"
 
 //Atlas Components
 import {
   Typography,
   Button,
+  Input,
   ButtonGroup,
   Card,
   ArrowRightIcon,
@@ -46,6 +47,7 @@ const AssignmentTemplate = ({ data }) => {
                 image={assignment.img.url}
                 actionButtons={
                   <ButtonGroup>
+                    <Button appearance="primary">Start Journal</Button>
                     {assignment.journals.map(journal => {
                       if (journal.submitted === true) {
                         return (
@@ -124,12 +126,6 @@ const AssignmentTemplate = ({ data }) => {
               </Card>
             </div>
           </div>
-
-          <div className="row rich-text-display">
-            <div className="col-md-6">
-              <CreateJournal />
-            </div>
-          </div>
         </div>
       </Layout>
     </div>
@@ -139,6 +135,7 @@ const AssignmentTemplate = ({ data }) => {
 export const query = graphql`
   query getSingleAssignment($slug: String) {
     strapiAssignment(slug: { eq: $slug }) {
+      strapiId
       title
       introduction
       img {

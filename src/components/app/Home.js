@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 //Images
 import { StaticImage } from "gatsby-plugin-image"
@@ -80,6 +81,7 @@ const Home = ({ state }) => {
         </div>
         <div className="row between-xs home-resources-section border"><InternshipResources /></div>
         <div className="row between-xs home-resources-section border"><StudentResources /></div>
+        <Link to="/create">Create Journal</Link>
       </div>
     </>
   )
