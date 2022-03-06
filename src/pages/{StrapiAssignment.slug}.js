@@ -9,6 +9,7 @@ import moment from "moment"
 
 //Components
 import Layout from "../components/layout"
+import CreateJournal from "../components/CreateJournal"
 
 //Atlas Components
 import {
@@ -122,6 +123,10 @@ const AssignmentTemplate = ({ data }) => {
                 </div>
               </Card>
             </div>
+          </div>
+
+          <div>
+            <CreateJournal />
           </div>
         </div>
       </Layout>
