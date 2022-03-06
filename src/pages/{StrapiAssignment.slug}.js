@@ -125,8 +125,10 @@ const AssignmentTemplate = ({ data }) => {
             </div>
           </div>
 
-          <div>
-            <CreateJournal />
+          <div className="row rich-text-display">
+            <div className="col-md-6">
+              <CreateJournal />
+            </div>
           </div>
         </div>
       </Layout>

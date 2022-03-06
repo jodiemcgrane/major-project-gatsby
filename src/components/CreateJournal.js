@@ -86,7 +86,7 @@ class CreateJournal extends React.Component {
             handleKeyCommand={this.handleKeyCommand}
             keyBindingFn={this.mapKeyToEditorCommand}
             onChange={this.onChange}
-            placeholder="Tell a story..."
+            placeholder="Create a Journal..."
             ref="editor"
             spellCheck={true}
           />

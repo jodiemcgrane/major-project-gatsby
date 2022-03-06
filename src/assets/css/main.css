@@ -239,4 +239,6 @@
 
 /* RICH TEXT EDITOR */
 
-
+.rich-text-display {
+  justify-content: center;
+}
