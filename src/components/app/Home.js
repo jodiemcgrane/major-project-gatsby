@@ -36,6 +36,9 @@ const Home = ({ state }) => {
 
   return (
     <>
+    <pre>
+        { JSON.stringify(state, null, 2) }
+      </pre>
       <div className="home-hero">
         <div className="home-page">
           <div className="row between-xs">

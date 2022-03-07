@@ -12,21 +12,29 @@ import "react-quill/dist/quill.snow.css"
 import { Input, Button } from "@atlas-design-system/react"
 
 const CreateJournal = ({ assignment, state }) => {
-
   //Create Journal Code
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
   const [text, setText] = useState("")
+  const assignmentId = assignment.strapiId
+  const userId = state.user.id
 
   const submitForm = e => {
     e.preventDefault()
-    const form = { title, about, text }
+    const form = {
+      title,
+      about,
+      text,
+      assignment: { id: assignmentId },
+      user: { id: userId },
+    }
     console.log(form)
 
     axios
       .post("https://internport-api.herokuapp.com/journals", form)
       .then(response => {
         console.log(response.data)
+        console.log(form)
         navigate(`/app/journals`)
       })
       .catch(err => console.log(err))

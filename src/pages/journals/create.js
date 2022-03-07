@@ -15,7 +15,7 @@ const CreateJournalPage = ({ location }) => {
   return (
     <div className="row rich-text-display">
       <div className="col-md-6">
-        <CreateJournal state={state} />
+        <CreateJournal state={state} assignment={assignment} />
       </div>
     </div>
   )

@@ -137,6 +137,7 @@ const AssignmentTemplate = ({ data }) => {
 export const query = graphql`
   query getSingleAssignment($slug: String) {
     strapiAssignment(slug: { eq: $slug }) {
+      id
       strapiId
       title
       introduction
