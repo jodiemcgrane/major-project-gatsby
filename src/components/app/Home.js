@@ -81,7 +81,6 @@ const Home = ({ state }) => {
         </div>
         <div className="row between-xs home-resources-section border"><InternshipResources /></div>
         <div className="row between-xs home-resources-section border"><StudentResources /></div>
-        <Link to="/create">Create Journal</Link>
       </div>
     </>
   )

@@ -11,7 +11,7 @@ import "react-quill/dist/quill.snow.css"
 //Atlas Components
 import { Input, Button } from "@atlas-design-system/react"
 
-const CreateJournal = () => {
+const CreateJournal = ({ assignment, state }) => {
 
   //Create Journal Code
   const [title, setTitle] = useState("")
@@ -44,11 +44,7 @@ const CreateJournal = () => {
         value={about}
         onChange={e => setAbout(e.target.value)}
       />
-      <ReactQuill
-        theme="snow"
-        value={text}
-        onChange={setText}
-      />
+      <ReactQuill theme="snow" value={text} onChange={setText} />
       <Button appearance="primary" onClick={submitForm}>
         Submit
       </Button>

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"
-import { navigate } from "gatsby"
+import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 
 //Images
 import { StaticImage } from "gatsby-plugin-image"
@@ -47,7 +47,9 @@ const AssignmentTemplate = ({ data }) => {
                 image={assignment.img.url}
                 actionButtons={
                   <ButtonGroup>
-                    <Button appearance="primary">Start Journal</Button>
+                    <Link to="/journals/create" state={{ assignment }}>
+                      Start Journal
+                    </Link>
                     {assignment.journals.map(journal => {
                       if (journal.submitted === true) {
                         return (
