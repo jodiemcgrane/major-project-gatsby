@@ -238,8 +238,33 @@
   margin-bottom: var(--spaceXXL);
 }
 
-/* RICH TEXT EDITOR */
+/* CREATE JOURNAL PAGE */
 
-.rich-text-display {
-  justify-content: center;
+.create-container {
+  border: 1px solid var(--primaryA300);
+  padding: 0 var(--spaceL);
+  padding-bottom: var(--spaceL);
+}
+
+.end-page-padding {
+  padding-bottom: 100px;
+}
+
+.create-journal-assignment {
+  padding-top: var(--spaceXXL);
+}
+
+.create-journal-header {
+  padding: var(--spaceXL) 0;
+}
+
+
+/* CREATE JOURNAL EDITOR */
+
+.input-bottom {
+  margin-bottom: var(--spaceM);
+}
+
+.rich-text-input {
+  margin-bottom: var(--spaceL);
 }

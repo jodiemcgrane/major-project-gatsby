@@ -35,7 +35,6 @@ const JournalsPage = () => {
   const data = useStaticQuery(query)
   const journals = data.allStrapiJournal.nodes
   const total = data.allStrapiJournal
-  console.log(journals);
 
   return (
     <div className="page">

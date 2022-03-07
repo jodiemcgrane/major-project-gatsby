@@ -9,7 +9,12 @@ import ReactQuill from "react-quill"
 import "react-quill/dist/quill.snow.css"
 
 //Atlas Components
-import { Input, Button } from "@atlas-design-system/react"
+import {
+  FormControl,
+  Input,
+  ButtonGroup,
+  Button,
+} from "@atlas-design-system/react"
 
 const CreateJournal = ({ assignment, state }) => {
   //Create Journal Code
@@ -34,7 +39,6 @@ const CreateJournal = ({ assignment, state }) => {
       .post("https://internport-api.herokuapp.com/journals", form)
       .then(response => {
         console.log(response.data)
-        console.log(form)
         navigate(`/app/journals`)
       })
       .catch(err => console.log(err))
@@ -42,20 +46,46 @@ const CreateJournal = ({ assignment, state }) => {
 
   return (
     <>
-      <Input
-        placeholder="Journal Title"
-        value={title}
-        onChange={e => setTitle(e.target.value)}
-      />
-      <Input
-        placeholder="Joural About"
-        value={about}
-        onChange={e => setAbout(e.target.value)}
-      />
-      <ReactQuill theme="snow" value={text} onChange={setText} />
-      <Button appearance="primary" onClick={submitForm}>
-        Submit
-      </Button>
+      <div className="row">
+        <div className="col-md-5 input-bottom">
+          <FormControl label="Title">
+            <Input
+              placeholder="Journal Title"
+              value={title}
+              onChange={e => setTitle(e.target.value)}
+            />
+          </FormControl>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-md-5 input-bottom">
+          <FormControl label="About">
+            <Input
+              placeholder="Joural About"
+              value={about}
+              onChange={e => setAbout(e.target.value)}
+            />
+          </FormControl>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-md-8 rich-text-input">
+          <FormControl label="Journal">
+            <ReactQuill theme="snow" value={text} onChange={setText} />
+          </FormControl>
+        </div>
+      </div>
+
+      <ButtonGroup>
+        <Button appearance="primary" size="large" onClick={submitForm}>
+          Submit
+        </Button>
+        <Button appearance="secondary" size="large">
+          Cancel
+        </Button>
+      </ButtonGroup>
     </>
   )
 }
