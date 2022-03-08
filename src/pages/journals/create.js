@@ -15,7 +15,7 @@ import {
   ButtonGroup,
   Card,
   ArrowRightIcon,
-  ArrowLeftIcon,
+  NotesIllustration,
 } from "@atlas-design-system/react"
 
 //Hooks
@@ -74,8 +74,11 @@ const CreateJournalPage = ({ location }) => {
 
           <div className="end-page-padding">
             <div className="create-container">
-              <div className="row center-xs middle-xs create-journal-header">
-                <Typography variant="displayText3">Create Journal</Typography>
+              <div className="row middle-xs create-journal-header">
+                <NotesIllustration />
+                <div className="create-journal-header-text">
+                  <Typography variant="displayText3">Create Journal</Typography>
+                </div>
               </div>
               <div>
                 <CreateJournal state={state} assignment={assignment} />

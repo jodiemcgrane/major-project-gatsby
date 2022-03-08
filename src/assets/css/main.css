@@ -256,15 +256,19 @@
 
 .create-journal-header {
   padding: var(--spaceXL) 0;
+  padding-left: var(--spaceM);
 }
 
+.create-journal-header-text {
+  margin-left: var(--spaceM);
+}
 
 /* CREATE JOURNAL EDITOR */
 
 .input-bottom {
-  margin-bottom: var(--spaceM);
+  margin-bottom: var(--spaceXL);
 }
 
 .rich-text-input {
-  margin-bottom: var(--spaceL);
+  margin-bottom: var(--spaceXXL);
 }

@@ -16,7 +16,7 @@ import {
   Button,
 } from "@atlas-design-system/react"
 
-const CreateJournal = ({ assignment, state }) => {
+const CreateJournal = ({ assignment, state, props }) => {
   //Create Journal Code
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
@@ -44,13 +44,24 @@ const CreateJournal = ({ assignment, state }) => {
       .catch(err => console.log(err))
   }
 
+  // END OF CREATE JOURNAL CODE
+
+  const modules = {
+    toolbar: [
+      [{ 'header': [1, 2, 3, false] }],
+      ['bold', 'italic', 'underline', 'blockquote', 'code'],
+      [{'list': 'ordered'}, {'list': 'bullet'},],
+      ['link', 'image']
+    ],
+  }
+
   return (
     <>
       <div className="row">
         <div className="col-md-5 input-bottom">
           <FormControl label="Title">
             <Input
-              placeholder="Journal Title"
+              placeholder="Title of your journal"
               value={title}
               onChange={e => setTitle(e.target.value)}
             />
@@ -62,7 +73,7 @@ const CreateJournal = ({ assignment, state }) => {
         <div className="col-md-5 input-bottom">
           <FormControl label="About">
             <Input
-              placeholder="Joural About"
+              placeholder="Short description about your journal"
               value={about}
               onChange={e => setAbout(e.target.value)}
             />
@@ -73,7 +84,7 @@ const CreateJournal = ({ assignment, state }) => {
       <div className="row">
         <div className="col-md-8 rich-text-input">
           <FormControl label="Journal">
-            <ReactQuill theme="snow" value={text} onChange={setText} />
+            <ReactQuill theme="snow" placeholder="Write your journal here..." modules={modules} value={text} onChange={setText} />
           </FormControl>
         </div>
       </div>
