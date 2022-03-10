@@ -16,6 +16,7 @@ import {
 
 const Journal = ({
   id,
+  strapiId,
   title,
   about,
   submitted,
@@ -30,9 +31,11 @@ const Journal = ({
   if (submitted === true) {
     button = (
       <>
-        <Button appearance="primary" onClick={function S() {}}>
-          View
-        </Button>
+        <Link to={`/journals/${strapiId}`} style={{ textDecoration: "none" }}>
+          <Button appearance="primary" onClick={function S() {}}>
+            View
+          </Button>
+        </Link>
       </>
     )
     lozenge = (
