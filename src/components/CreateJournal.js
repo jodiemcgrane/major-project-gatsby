@@ -48,7 +48,7 @@ const CreateJournal = ({ assignment, state, props }) => {
 
   const modules = {
     toolbar: [
-      [{ 'header': [1, 2, 3, false] }],
+      [{ 'header': [1, 2, 3, false] }, {font: []}],
       ['bold', 'italic', 'underline', 'blockquote', 'code'],
       [{'list': 'ordered'}, {'list': 'bullet'},],
       ['link', 'image']

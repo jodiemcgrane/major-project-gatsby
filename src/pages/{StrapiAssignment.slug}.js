@@ -31,13 +31,15 @@ const AssignmentTemplate = ({ data }) => {
         <div className="page">
           <div className="row back-to-assignments-button">
             <div className="col-xs">
-              <Button
-                icon={<ArrowLeftIcon />}
-                size="large"
-                onClick={function S() {}}
-              >
-                Back to Assignments
-              </Button>
+              <Link style={{ textDecoration: "none" }} to="/app/assignments">
+                <Button
+                  icon={<ArrowLeftIcon />}
+                  size="large"
+                  onClick={function S() {}}
+                >
+                  Back to Assignments
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="row between-xs">
@@ -47,9 +49,6 @@ const AssignmentTemplate = ({ data }) => {
                 image={assignment.img.url}
                 actionButtons={
                   <ButtonGroup>
-                    <Link to="/journals/create" state={{ assignment }}>
-                      Start Journal
-                    </Link>
                     {assignment.journals.map(journal => {
                       if (journal.submitted === true) {
                         return (
@@ -61,6 +60,14 @@ const AssignmentTemplate = ({ data }) => {
                             >
                               View Journal
                             </Button>
+                            <Link
+                              style={{ textDecoration: "none" }}
+                              to="/app/assignments"
+                            >
+                              <Button appearance="secondary">
+                                Edit Journal
+                              </Button>
+                            </Link>
                           </>
                         )
                       } else if (journal.submitted === false) {
