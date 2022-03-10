@@ -65,7 +65,7 @@ const AssignmentTemplate = ({ data }) => {
                               to="/app/assignments"
                             >
                               <Button appearance="secondary">
-                                Edit Journal
+                                New Journal
                               </Button>
                             </Link>
                           </>
@@ -80,6 +80,14 @@ const AssignmentTemplate = ({ data }) => {
                             >
                               Continue Journal
                             </Button>
+                            <Link
+                              style={{ textDecoration: "none" }}
+                              to="/app/assignments"
+                            >
+                              <Button appearance="secondary">
+                                New Journal
+                              </Button>
+                            </Link>
                           </>
                         )
                       } else {
