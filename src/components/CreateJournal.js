@@ -14,6 +14,7 @@ import {
   Input,
   ButtonGroup,
   Button,
+  Checkbox,
 } from "@atlas-design-system/react"
 
 const CreateJournal = ({ assignment, state, props }) => {
@@ -24,12 +25,33 @@ const CreateJournal = ({ assignment, state, props }) => {
   const assignmentId = assignment.strapiId
   const userId = state.user.id
 
+  const saveForm = e => {
+    e.preventDefault()
+    const form = {
+      title,
+      about,
+      text,
+      assignment: { id: assignmentId },
+      user: { id: userId },
+    }
+    console.log(form)
+
+    axios
+      .post("https://internport-api.herokuapp.com/journals", form)
+      .then(response => {
+        console.log(response.data)
+        navigate(`/app/journals`)
+      })
+      .catch(err => console.log(err))
+  }
+
   const submitForm = e => {
     e.preventDefault()
     const form = {
       title,
       about,
       text,
+      submitted: true,
       assignment: { id: assignmentId },
       user: { id: userId },
     }
@@ -96,7 +118,14 @@ const CreateJournal = ({ assignment, state, props }) => {
       </div>
 
       <ButtonGroup>
-        <Button appearance="primary" size="large" onClick={submitForm}>
+        <Button appearance="primary" size="large" onClick={saveForm}>
+          Save
+        </Button>
+        <Button
+          appearance="secondary"
+          size="large"
+          onClick={submitForm}
+        >
           Submit
         </Button>
         <Button appearance="secondary" size="large">
