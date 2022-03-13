@@ -10,9 +10,6 @@ import CreateJournal from "../../components/CreateJournal"
 //Atlas Components
 import {
   Typography,
-  Button,
-  Input,
-  ButtonGroup,
   Card,
   ArrowRightIcon,
   NotesIllustration,

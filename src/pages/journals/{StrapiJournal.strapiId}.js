@@ -5,15 +5,24 @@ import { Link } from "gatsby"
 //Components
 import Layout from "../../components/Layout"
 
+//Atlas Components
+import { Typography, Button, Lozenge } from "@atlas-design-system/react"
+
 const JournalTemplate = ({ data }) => {
   const journal = data.strapiJournal
-  console.log(journal)
 
   return (
     <div className="atls">
       <Layout>
         <div className="page">
-          <h1>{journal.strapiId}</h1>
+          <div className="row between-xs middle-xs">
+            <Typography variant="displayText1">{journal.title}</Typography>
+            {journal.submitted ? (
+              <Lozenge appearance="success" text="Submitted" />
+            ) : (
+              <Lozenge appearance="warning" text="Not Submitted" />
+            )}
+          </div>
         </div>
       </Layout>
     </div>

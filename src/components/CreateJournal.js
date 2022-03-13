@@ -48,10 +48,10 @@ const CreateJournal = ({ assignment, state, props }) => {
 
   const modules = {
     toolbar: [
-      [{ 'header': [1, 2, 3, false] }, {font: []}],
-      ['bold', 'italic', 'underline', 'blockquote', 'code'],
-      [{'list': 'ordered'}, {'list': 'bullet'},],
-      ['link', 'image']
+      [{ header: [1, 2, 3, false] }, { font: [] }],
+      ["bold", "italic", "underline", "blockquote", "code"],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["link"],
     ],
   }
 
@@ -84,7 +84,13 @@ const CreateJournal = ({ assignment, state, props }) => {
       <div className="row">
         <div className="col-md-8 rich-text-input">
           <FormControl label="Journal">
-            <ReactQuill theme="snow" placeholder="Write your journal here..." modules={modules} value={text} onChange={setText} />
+            <ReactQuill
+              theme="snow"
+              placeholder="Write your journal here..."
+              modules={modules}
+              value={text}
+              onChange={setText}
+            />
           </FormControl>
         </div>
       </div>
