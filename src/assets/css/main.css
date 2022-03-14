@@ -277,3 +277,19 @@
 .rich-text-input {
   margin-bottom: var(--spaceXXL);
 }
+
+/* SINGLE JOURNAL PAGE */
+
+.single-journal-title {
+  padding-top: var(--spaceXXL);
+  padding-bottom: var(--spaceL);
+}
+
+.single-journal-about {
+  padding-bottom: var(--spaceL);
+}
+
+.single-journal-text {
+  padding-top: var(--spaceXL);
+  padding-bottom: var(--spaceXL);
+}
