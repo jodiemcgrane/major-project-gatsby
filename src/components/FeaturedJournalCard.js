@@ -17,12 +17,13 @@ const FeaturedJournalCard = ({ journals }) => {
         return (
           <Card
             key={journal.id}
-            onClick={function S() {}}
             actionButtons={
               <ButtonGroup>
-                <Button appearance="primary" onClick={function S() {}}>
-                  See More
-                </Button>
+                <Link to={`/journals/${journal.strapiId}`} style={{ textDecoration: "none" }}>
+                  <Button appearance="primary">
+                    See More
+                  </Button>
+                </Link>
               </ButtonGroup>
             }
             illustration={<NotesIllustration />}

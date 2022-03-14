@@ -103,6 +103,10 @@
   padding-top: var(--spaceXL);
 }
 
+.featured-journal-display {
+  justify-content: center;
+}
+
 .featured-journals-header {
   padding: var(--spaceXXL) 0;
 }

@@ -17,6 +17,7 @@ const query = graphql`
   {
     allStrapiJournal(filter: { featured: { eq: true } }) {
       nodes {
+        strapiId
         id
         title
         about
@@ -51,9 +52,11 @@ const Home = ({ state }) => {
                   as an intern of Travelport? Get started now.
                 </Typography>
               </div>
-              <Button appearance="primary" size="large">
-                View Assignments
-              </Button>
+              <Link style={{ textDecoration: "none" }} to="/app/assignments">
+                <Button appearance="primary" size="large">
+                  View Assignments
+                </Button>
+              </Link>
             </div>
             <div className="col-md-5">
               <StaticImage
@@ -73,7 +76,7 @@ const Home = ({ state }) => {
         <div className="row center-xs middle-xs featured-journals-header">
           <Typography variant="displayText3">Featured Journals</Typography>
         </div>
-        <div className="row center-xs">
+        <div className="row featured-journal-display">
           <FeaturedJournalCard journals={journals} />
         </div>
         <div className="row center-xs middle-xs featured-journals-header">
