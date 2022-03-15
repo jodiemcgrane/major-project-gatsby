@@ -9,7 +9,14 @@ import moment from "moment"
 import Layout from "../../components/Layout"
 
 //Atlas Components
-import { Typography, Button, Lozenge } from "@atlas-design-system/react"
+import {
+  Typography,
+  ButtonGroup,
+  Button,
+  Lozenge,
+  TrashIcon,
+  EditIcon,
+} from "@atlas-design-system/react"
 
 const JournalTemplate = ({ data }) => {
   const journal = data.strapiJournal
@@ -18,16 +25,36 @@ const JournalTemplate = ({ data }) => {
     <div className="atls">
       <Layout>
         <div className="page">
-          <div className="row between-xs top-xs single-journal-title">
+          <div className="row between-xs middle-xs single-journal-title">
             <div className="col-md-7">
               <Typography variant="displayText2">{journal.title}</Typography>
             </div>
+            <div>
+              <ButtonGroup>
+                <Button
+                  appearance="secondary"
+                  size="small"
+                  icon={<EditIcon />}
+                  iconAlign="right"
+                >
+                  Edit
+                </Button>
+                <Button
+                  appearance="destructive"
+                  size="small"
+                  icon={<TrashIcon />}
+                  iconAlign="right"
+                >
+                  Delete
+                </Button>
+              </ButtonGroup>
+            </div>
 
-            {journal.submitted ? (
+            {/* {journal.submitted ? (
               <Lozenge appearance="success" text="Submitted" />
             ) : (
               <Lozenge appearance="warning" text="Not Submitted" />
-            )}
+            )} */}
           </div>
 
           <div className="row">
