@@ -30,13 +30,11 @@ const Journal = ({
 
   if (submitted === true) {
     button = (
-      <>
-        <Link to={`/journals/${strapiId}`} style={{ textDecoration: "none" }}>
-          <Button appearance="primary" onClick={function S() {}}>
-            View
-          </Button>
-        </Link>
-      </>
+      <Link to={`/journals/${strapiId}`} style={{ textDecoration: "none" }}>
+        <Button appearance="primary" onClick={function S() {}}>
+          View
+        </Button>
+      </Link>
     )
     lozenge = (
       <>

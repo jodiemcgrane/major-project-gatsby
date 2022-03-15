@@ -38,14 +38,20 @@ const JournalTemplate = ({ data }) => {
             <div className="row between-xs">
               <div className="col-md-4">
                 <ButtonGroup>
-                  <Button
-                    appearance="secondary"
-                    size="small"
-                    icon={<EditIcon />}
-                    iconAlign="right"
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    to={`/journals/edit/${journal.strapiId}`}
+                    state={{ journal }}
                   >
-                    Edit
-                  </Button>
+                    <Button
+                      appearance="secondary"
+                      size="small"
+                      icon={<EditIcon />}
+                      iconAlign="right"
+                    >
+                      Edit
+                    </Button>
+                  </Link>
                   <Button
                     appearance="destructive"
                     size="small"
@@ -65,13 +71,13 @@ const JournalTemplate = ({ data }) => {
           </div>
 
           <div className="row">
-            <div className="col-md-7 single-journal-about">
+            <div className="col-md-8 single-journal-about">
               <Typography variant="displayText5">{journal.about}</Typography>
             </div>
           </div>
 
           <div className="row between-xs">
-            <div className="col-xs col-md-7">
+            <div className="col-md-8">
               <Typography variant="contentText1">
                 {moment(journal.published_at).format("LL")}
               </Typography>
@@ -123,17 +129,17 @@ const JournalTemplate = ({ data }) => {
                   </div>
 
                   <div>
-                  {journal.assignment.description.map(description => {
-                    return (
-                      <div className="assignment-description">
-                        <ArrowRightIcon width="25" />
-                        <Typography variant="contentText1">
-                          {description.text}
-                        </Typography>
-                      </div>
-                    )
-                  })}
-                </div>
+                    {journal.assignment.description.map(description => {
+                      return (
+                        <div className="assignment-description">
+                          <ArrowRightIcon width="25" />
+                          <Typography variant="contentText1">
+                            {description.text}
+                          </Typography>
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
               </Card>
             </div>

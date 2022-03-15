@@ -36,7 +36,7 @@ const Assignment = ({
             {journals.map(journal => {
               if (journal.submitted === true) {
                 return (
-                  <>
+                  <Link style={{ textDecoration: "none" }}>
                     <Button
                       className="assignment-button"
                       appearance="secondary"
@@ -44,7 +44,7 @@ const Assignment = ({
                     >
                       View Journal
                     </Button>
-                  </>
+                  </Link>
                 )
               } else if (journal.submitted === false) {
                 return (
