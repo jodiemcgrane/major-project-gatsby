@@ -280,8 +280,12 @@
 
 /* SINGLE JOURNAL PAGE */
 
-.single-journal-title {
+.single-journal-buttons {
   padding-top: var(--spaceXXL);
+}
+
+.single-journal-title {
+  padding-top: var(--spaceL);
   padding-bottom: var(--spaceL);
 }
 

@@ -25,36 +25,41 @@ const JournalTemplate = ({ data }) => {
     <div className="atls">
       <Layout>
         <div className="page">
+          <div className="row middle-xs single-journal-buttons">
+            <div className="col-xs">
+              {journal.submitted ? (
+                <Lozenge appearance="success" text="Submitted" />
+              ) : (
+                <Lozenge appearance="warning" text="Not Submitted" />
+              )}
+            </div>
+            <div className="row between-xs">
+              <div className="col-md-4">
+                <ButtonGroup>
+                  <Button
+                    appearance="secondary"
+                    size="small"
+                    icon={<EditIcon />}
+                    iconAlign="right"
+                  >
+                    Edit
+                  </Button>
+                  <Button
+                    appearance="destructive"
+                    size="small"
+                    icon={<TrashIcon />}
+                    iconAlign="right"
+                  >
+                    Delete
+                  </Button>
+                </ButtonGroup>
+              </div>
+            </div>
+          </div>
           <div className="row between-xs middle-xs single-journal-title">
             <div className="col-md-7">
               <Typography variant="displayText2">{journal.title}</Typography>
             </div>
-            <div>
-              <ButtonGroup>
-                <Button
-                  appearance="secondary"
-                  size="small"
-                  icon={<EditIcon />}
-                  iconAlign="right"
-                >
-                  Edit
-                </Button>
-                <Button
-                  appearance="destructive"
-                  size="small"
-                  icon={<TrashIcon />}
-                  iconAlign="right"
-                >
-                  Delete
-                </Button>
-              </ButtonGroup>
-            </div>
-
-            {/* {journal.submitted ? (
-              <Lozenge appearance="success" text="Submitted" />
-            ) : (
-              <Lozenge appearance="warning" text="Not Submitted" />
-            )} */}
           </div>
 
           <div className="row">
@@ -63,8 +68,8 @@ const JournalTemplate = ({ data }) => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-xs col-md-4">
+          <div className="row between-xs">
+            <div className="col-xs col-md-7">
               <Typography variant="contentText1">
                 {moment(journal.published_at).format("LL")}
               </Typography>
@@ -92,7 +97,7 @@ const JournalTemplate = ({ data }) => {
 
 export const query = graphql`
   query getSingleJournal($strapiId: Int) {
-    strapiJournal(strapiId: { eq: $strapiId }) {
+    strapiJournal(strapiId: { eq: $strapiId }, submitted: { eq: true }) {
       id
       strapiId
       title
@@ -104,7 +109,16 @@ export const query = graphql`
       assignment {
         id
         title
-        slug
+        introduction
+        description {
+          id
+          text
+        }
+        dueDate
+        published_at
+        img {
+          url
+        }
       }
       user {
         id
