@@ -111,20 +111,20 @@ const AssignmentTemplate = ({ data }) => {
               >
                 <div className="row between-xs">
                   <div className="assignment-heading">
-                    <Typography variant="displayText3">
+                    <Typography variant="displayText2">
                       {assignment.title}
                     </Typography>
                   </div>
                   <div className="assignment-due-date">
-                    <Typography variant="contentText2">
-                      {moment(assignment.dueDate).format("LLL")}
+                    <Typography variant="contentText1">
+                      Due: {moment(assignment.dueDate).format("LLL")}
                     </Typography>
                   </div>
                 </div>
 
                 <div className="row">
                   <div className="assignment-intro">
-                    <Typography variant="displayText6">
+                    <Typography variant="displayText5">
                       {assignment.introduction}
                     </Typography>
                   </div>

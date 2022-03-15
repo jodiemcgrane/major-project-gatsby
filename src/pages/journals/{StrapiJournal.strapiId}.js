@@ -13,9 +13,11 @@ import {
   Typography,
   ButtonGroup,
   Button,
+  Card,
   Lozenge,
   TrashIcon,
   EditIcon,
+  ArrowRightIcon,
 } from "@atlas-design-system/react"
 
 const JournalTemplate = ({ data }) => {
@@ -87,6 +89,53 @@ const JournalTemplate = ({ data }) => {
               <Typography variant="contentText1">
                 Written by {journal.user.username}
               </Typography>
+            </div>
+          </div>
+          <div className="row assignment-display">
+            <div className="col-xs col-md-11 journal-assignment-card">
+              <Card
+                layout="horizontal"
+                image={journal.assignment.img.url}
+                actionButtons={
+                  <ButtonGroup>
+                    <Button appearance="primary">View All Assignments</Button>
+                  </ButtonGroup>
+                }
+              >
+                <div className="row between-xs">
+                  <div className="assignment-heading">
+                    <Typography variant="displayText2">
+                      {journal.assignment.title}
+                    </Typography>
+                  </div>
+                  <div className="assignment-due-date">
+                    <Typography variant="contentText1">
+                      Due: {moment(journal.assignment.dueDate).format("LL")}
+                    </Typography>
+                  </div>
+
+                  <div className="row">
+                    <div className="assignment-intro">
+                      <Typography variant="displayText5">
+                        {journal.assignment.introduction}
+                      </Typography>
+                    </div>
+                  </div>
+
+                  <div>
+                  {journal.assignment.description.map(description => {
+                    return (
+                      <div className="assignment-description">
+                        <ArrowRightIcon width="25" />
+                        <Typography variant="contentText1">
+                          {description.text}
+                        </Typography>
+                      </div>
+                    )
+                  })}
+                </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
