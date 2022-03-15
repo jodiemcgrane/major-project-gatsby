@@ -20,10 +20,10 @@ const StudentResources = () => {
       </div>
       <div className="col-md-7">
         <div className="row home-resources-heading">
-          <Typography variant="displayText4">Student to Work Transition</Typography>
+          <Typography variant="displayText3">Student to Work Transition</Typography>
         </div>
         <div className="row home-resources-sub-heading">
-          <Typography variant="displayText6">
+          <Typography variant="displayText5">
             We want to provide you the right resources as your student journey ends.
           </Typography>
         </div>

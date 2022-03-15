@@ -11,10 +11,10 @@ const InternshipResource = () => {
     <>
       <div className="col-md-7">
         <div className="row home-resources-heading">
-          <Typography variant="displayText4">Internship Experience</Typography>
+          <Typography variant="displayText3">Internship Experience</Typography>
         </div>
         <div className="row home-resources-sub-heading">
-          <Typography variant="displayText6">
+          <Typography variant="displayText5">
             Want to make the most out of your internship?
           </Typography>
         </div>
