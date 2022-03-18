@@ -311,3 +311,26 @@
 .delete-button {
   margin-left: var(--spaceM);
 }
+
+/* DELETE JOURNAL MODAL */
+
+.text-display {
+  justify-content: center;
+  text-align: center;
+}
+
+.modal-spacing {
+  padding: var(--spaceXXL);
+}
+.modal-heading {
+  padding-top: var(--spaceL);
+  padding-bottom: var(--spaceM);
+}
+
+.modal-subheading {
+  padding-bottom: var(--spaceS);
+}
+
+.modal-buttons {
+  padding-bottom: var(--spaceS);
+}
