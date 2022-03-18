@@ -306,3 +306,7 @@
 .assignment-display {
   justify-content: center;
 }
+
+.delete-button {
+  margin-left: var(--spaceM);
+}

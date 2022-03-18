@@ -54,6 +54,7 @@ const JournalTemplate = ({ data }) => {
                   </Link>
                   <Button
                     appearance="destructive"
+                    className="delete-button"
                     size="small"
                     icon={<TrashIcon />}
                     iconAlign="right"

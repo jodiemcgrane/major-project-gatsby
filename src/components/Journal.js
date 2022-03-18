@@ -31,7 +31,7 @@ const Journal = ({
   if (submitted === true) {
     button = (
       <Link to={`/journals/${strapiId}`} style={{ textDecoration: "none" }}>
-        <Button appearance="primary" onClick={function S() {}}>
+        <Button appearance="primary">
           View
         </Button>
       </Link>
@@ -43,11 +43,11 @@ const Journal = ({
     )
   } else if (submitted === false) {
     button = (
-      <>
+      <Link style={{ textDecoration: "none" }}>
         <Button appearance="primary" onClick={function S() {}}>
           Continue
         </Button>
-      </>
+      </Link>
     )
     lozenge = (
       <>
@@ -76,7 +76,7 @@ const Journal = ({
         actionButtons={
           <ButtonGroup>
             {button}
-            <Button appearance="secondary">View Assignment</Button>
+            <Button appearance="secondary" className="assignment-button">View Assignment</Button>
           </ButtonGroup>
         }
         illustration={<NotesIllustration />}
