@@ -7,6 +7,7 @@ import moment from "moment"
 
 //Components
 import Layout from "../../components/Layout"
+import DeleteJournalModal from "../../components/DeleteJournalModal"
 
 //Atlas Components
 import {
@@ -24,14 +25,14 @@ const JournalTemplate = ({ data }) => {
   const journal = data.strapiJournal
 
   //Handle Delete Modal
-  const [isOpen, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
 
-  const handleClickOpen = () => {
-    setOpen(true)
+  const handleOpen = () => {
+    setOpen(false)
   }
 
   const handleClose = () => {
-    setOpen(false)
+    setOpen(true)
   }
 
   return (
@@ -69,10 +70,15 @@ const JournalTemplate = ({ data }) => {
                     size="small"
                     icon={<TrashIcon />}
                     iconAlign="right"
-                    onClick={handleClickOpen}
+                    onClick={handleOpen}
                   >
                     Delete
                   </Button>
+                  <DeleteJournalModal
+                    open={open}
+                    handleClose={handleClose}
+                    journal={journal}
+                  />
                 </ButtonGroup>
               </div>
             </div>
@@ -158,8 +164,6 @@ const JournalTemplate = ({ data }) => {
             </div>
           </div>
         </div>
-
-        {/* <Modal isOpen={isOpen} handleClose={handleClose} /> */}
       </Layout>
     </div>
   )
