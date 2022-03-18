@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
@@ -22,6 +22,17 @@ import {
 
 const JournalTemplate = ({ data }) => {
   const journal = data.strapiJournal
+
+  //Handle Delete Modal
+  const [isOpen, setOpen] = useState(false)
+
+  const handleClickOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+  }
 
   return (
     <div className="atls">
@@ -58,6 +69,7 @@ const JournalTemplate = ({ data }) => {
                     size="small"
                     icon={<TrashIcon />}
                     iconAlign="right"
+                    onClick={handleClickOpen}
                   >
                     Delete
                   </Button>
@@ -146,6 +158,8 @@ const JournalTemplate = ({ data }) => {
             </div>
           </div>
         </div>
+
+        {/* <Modal isOpen={isOpen} handleClose={handleClose} /> */}
       </Layout>
     </div>
   )
