@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "gatsby"
 
 import axios from "axios"
 
@@ -12,6 +13,19 @@ import {
 } from "@atlas-design-system/react"
 
 const DeleteJournalModal = ({ journal, open, handleClose }) => {
+  //Delete Journal
+  const submitDelete = () => {
+    axios
+      .delete(
+        `https://internport-api.herokuapp.com/journals/${journal.strapiId}`
+      )
+      .then(response => {
+        console.log(response.data)
+        navigate(`/app/journals`)
+      })
+      .catch(err => console.log(err))
+  }
+
   return (
     <>
       <Modal
@@ -20,7 +34,15 @@ const DeleteJournalModal = ({ journal, open, handleClose }) => {
         actionButtons={
           <div className="modal-buttons">
             <ButtonGroup align="right">
-              <Button appearance="primary">Confirm</Button>
+              <Button
+                appearance="primary"
+                onClick={() => {
+                  submitDelete()
+                  handleClose()
+                }}
+              >
+                Confirm
+              </Button>
               <Button appearance="secondary" onClick={handleClose}>
                 Cancel
               </Button>
