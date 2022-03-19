@@ -18,7 +18,7 @@ import {
 } from "@atlas-design-system/react"
 
 const CreateJournal = ({ assignment, state, props }) => {
-  //Create Journal Code
+  //Create journal code
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
   const [text, setText] = useState("")
@@ -66,7 +66,7 @@ const CreateJournal = ({ assignment, state, props }) => {
       .catch(err => console.log(err))
   }
 
-  // END OF CREATE JOURNAL CODE
+  //End of create journal code
 
   const modules = {
     toolbar: [

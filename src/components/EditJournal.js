@@ -18,12 +18,15 @@ import {
 } from "@atlas-design-system/react"
 
 const EditJournal = ({ journal }) => {
-  //Edit Journal Code
+  //Edit journal code
+
+  //form
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
   const [text, setText] = useState("")
 
-  const [journalData, setJournalData] = useState(null)
+  //journal
+  const [journalData, setJournalData] = useState({})
 
   useEffect(() => {
     axios
@@ -31,14 +34,14 @@ const EditJournal = ({ journal }) => {
       .then(response => {
         console.log(response.data)
         setJournalData(response.data)
-        setTitle(response.data.journal.title)
-        setAbout(response.data.journal.about)
-        setText(response.data.journal.text)
+        setTitle(response.data)
+        setAbout(response.data)
+        setText(response.data)
       })
       .catch(err => {
         console.log(err)
       })
-  })
+  }, [])
 
   if (!journal) return null
 
@@ -59,6 +62,7 @@ const EditJournal = ({ journal }) => {
       })
       .catch(err => console.log(err))
   }
+  //End of edit journal code
 
   //React Quill modules
   const modules = {
@@ -77,7 +81,7 @@ const EditJournal = ({ journal }) => {
           <FormControl label="Title">
             <Input
               onChange={e => setTitle(e.target.value)}
-              value={journal.title}
+              defaultValue={journalData.title}
             />
           </FormControl>
         </div>
@@ -88,7 +92,7 @@ const EditJournal = ({ journal }) => {
           <FormControl label="About">
             <Input
               onChange={e => setAbout(e.target.value)}
-              value={journal.about}
+              defaultValue={journalData.about}
             />
           </FormControl>
         </div>
@@ -101,7 +105,7 @@ const EditJournal = ({ journal }) => {
               theme="snow"
               modules={modules}
               onChange={setText}
-              value={journal.text}
+              defaultValue={journalData.text}
             />
           </FormControl>
         </div>
