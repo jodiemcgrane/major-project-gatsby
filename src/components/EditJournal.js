@@ -78,7 +78,7 @@ const EditJournal = ({ journal }) => {
     <>
       <div className="row">
         <div className="col-md-5 input-bottom">
-          <FormControl label="Title">
+          <FormControl label="Edit Title">
             <Input
               onChange={e => setTitle(e.target.value)}
               defaultValue={journalData.title}
@@ -89,7 +89,7 @@ const EditJournal = ({ journal }) => {
 
       <div className="row">
         <div className="col-md-5 input-bottom">
-          <FormControl label="About">
+          <FormControl label="Edit About">
             <Input
               onChange={e => setAbout(e.target.value)}
               defaultValue={journalData.about}
