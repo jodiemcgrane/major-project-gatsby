@@ -14,7 +14,6 @@ import {
   Input,
   ButtonGroup,
   Button,
-  Checkbox,
 } from "@atlas-design-system/react"
 
 const EditJournal = ({ journal }) => {
@@ -23,7 +22,8 @@ const EditJournal = ({ journal }) => {
   //form
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
-  const [text, setText] = useState("")
+  //const [text, setText] = useState("")
+  const [form, setForm] = useState()
 
   //journal
   const [journalData, setJournalData] = useState({})
@@ -36,26 +36,46 @@ const EditJournal = ({ journal }) => {
         setJournalData(response.data)
         setTitle(response.data)
         setAbout(response.data)
-        setText(response.data)
+        //setText(response.data)
+        setForm(response.data)
       })
       .catch(err => {
         console.log(err)
       })
-  }, [])
+  }, [journal.strapiId])
 
   if (!journal) return null
 
-  const saveForm = e => {
-    e.preventDefault()
+  // const handleChange = value => {
+  //   setText((prev) => {
+  //     return {
+  //       ...prev,
+  //       text: value
+  //     }
+  //   })
+  // }
+
+  const handleForm = e => {
+    setForm(prevState => ({
+      ...prevState,
+      [e.target.value]: e.target.value,
+    }))
+  }
+
+  const saveForm = () => {
+    // e.preventDefault()
     const form = {
       title,
       about,
-      text,
+      //   text,
     }
     console.log(form)
 
     axios
-      .put("https://internport-api.herokuapp.com/journals", form)
+      .put(
+        `https://internport-api.herokuapp.com/journals/${journal.strapiId}`,
+        form
+      )
       .then(response => {
         console.log(response.data)
         navigate(`/app/journals`)
@@ -98,18 +118,19 @@ const EditJournal = ({ journal }) => {
         </div>
       </div>
 
-      <div className="row">
+      {/* <div className="row">
         <div className="col-md-8 rich-text-input">
           <FormControl label="Edit Journal">
             <ReactQuill
               theme="snow"
               modules={modules}
-              onChange={setText}
-              defaultValue={journalData.text}
+              defaultValue=''
+              onChange={handleChange}
+              value={journalData.text}
             />
           </FormControl>
         </div>
-      </div>
+      </div> */}
 
       <ButtonGroup>
         <Button appearance="primary" size="large" onClick={saveForm}>
