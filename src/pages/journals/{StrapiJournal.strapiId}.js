@@ -23,6 +23,7 @@ import {
 
 const JournalTemplate = ({ data }) => {
   const journal = data.strapiJournal
+  //console.log(journal)
 
   //Handle Delete Modal
   const [open, setOpen] = useState(true)

@@ -67,7 +67,7 @@ const EditJournal = ({ journal }) => {
     const form = {
       title,
       about,
-      //   text,
+      //text,
     }
     console.log(form)
 
