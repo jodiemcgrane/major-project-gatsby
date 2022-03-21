@@ -141,11 +141,14 @@
 }
 
 .home-resources-text {
-  padding: var(--spaceM) 0;
+  padding-top: var(--spaceM);
 }
 
-.home-resources-button {
-  margin-top: 70px;
+.home-resources-button-one {
+  margin-top: 75px;
+}
+.home-resources-button-two {
+  margin-top: 42px;
 }
 
 /* ASSIGNMENTS PAGE */

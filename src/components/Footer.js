@@ -19,8 +19,8 @@ const FooterBottom = () => {
           <Link to="/app">Terms of Service</Link>
         </Footer.Menu>
         <Footer.Menu title="Resources">
-        <Link to="/app">Link 1</Link>
-        <Link to="/app">Link 2</Link>
+        <Link to="/resources/tips-on-writing">Tips on Writing</Link>
+        <Link to="/resources/student-to-work">Student to Work</Link>
         </Footer.Menu>
       </React.Fragment>
     </Footer>

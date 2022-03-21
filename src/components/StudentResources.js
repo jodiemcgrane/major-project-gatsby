@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 //Images
 import { StaticImage } from "gatsby-plugin-image"
@@ -20,11 +21,14 @@ const StudentResources = () => {
       </div>
       <div className="col-md-7">
         <div className="row home-resources-heading">
-          <Typography variant="displayText3">Student to Work Transition</Typography>
+          <Typography variant="displayText3">
+            Student to Work Transition
+          </Typography>
         </div>
         <div className="row home-resources-sub-heading">
           <Typography variant="displayText5">
-            We want to provide you the right resources as your student journey ends.
+            We want to provide you the right resources as your student journey
+            ends.
           </Typography>
         </div>
         <div className="row home-resources-text">
@@ -34,10 +38,15 @@ const StudentResources = () => {
             molestie, elementum tellus quis, finibus magna.
           </Typography>
         </div>
-        <div className="row bottom-xs home-resources-button">
-          <Button appearance="secondary" size="large">
-            Learn More
-          </Button>
+        <div className="row bottom-xs home-resources-button-two">
+          <Link
+            to="/resources/student-to-work"
+            style={{ textDecoration: "none" }}
+          >
+            <Button appearance="secondary" size="large">
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
     </>
