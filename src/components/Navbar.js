@@ -1,10 +1,25 @@
 import React from "react"
 import { Link } from "gatsby"
 
+//Hooks
+import useAuth from "../hooks/useAuth"
+
 //Components
-import { Header, ArrowDownIcon, Dropdown } from "@atlas-design-system/react"
+import {
+  Header,
+  Button,
+  ArrowDownIcon,
+  Dropdown,
+} from "@atlas-design-system/react"
 
 const Navbar = () => {
+  const { logout, isAuthenticated } = useAuth()
+
+  const handleLogout = e => {
+    e.preventDefault()
+    logout()
+  }
+
   return (
     <Header
       leftNavigation={
@@ -26,13 +41,15 @@ const Navbar = () => {
           </Link>
         </>
       }
-      // rightNavigation={
-      //   <Dropdown content={<Link>Link 1</Link>}>
-      //     <Link style={{ textDecoration: "none", color: "#F7E4CB" }} to="/app">
-      //       Resources
-      //     </Link>
-      //   </Dropdown>
-      // }
+      rightNavigation={
+        <>
+          {isAuthenticated ? (
+            <Button onClick={handleLogout} appearance="secondaryReverse">
+              Logout
+            </Button>
+          ) : null}
+        </>
+      }
     />
   )
 }
