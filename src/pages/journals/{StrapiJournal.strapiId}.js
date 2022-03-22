@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
+import ReactMarkdown from "react-markdown"
+
 //MomentJS
 import moment from "moment"
 
@@ -37,7 +39,7 @@ const JournalTemplate = ({ data }) => {
   }
 
   return (
-    <div className="atls">
+    <>
       <Layout>
         <div className="page">
           <div className="row middle-xs single-journal-buttons">
@@ -106,7 +108,9 @@ const JournalTemplate = ({ data }) => {
 
           <div className="row">
             <div className="col-md-7 single-journal-text">
-              <Typography variant="contentText1">{journal.text}</Typography>
+              {/* <Typography variant="contentText1"> */}
+              <ReactMarkdown children={journal.text} />
+              {/* </Typography> */}
             </div>
           </div>
 
@@ -166,7 +170,7 @@ const JournalTemplate = ({ data }) => {
           </div>
         </div>
       </Layout>
-    </div>
+    </>
   )
 }
 

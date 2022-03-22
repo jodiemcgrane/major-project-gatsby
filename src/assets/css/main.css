@@ -76,6 +76,10 @@
 
 /* HOME PAGE */
 
+.logout-button {
+  margin-top: 6px;
+}
+
 .home-hero {
   background-color: var(--primaryB200);
 }

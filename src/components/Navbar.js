@@ -44,9 +44,11 @@ const Navbar = () => {
       rightNavigation={
         <>
           {isAuthenticated ? (
-            <Button onClick={handleLogout} appearance="secondaryReverse">
-              Logout
-            </Button>
+            <div className="logout-button">
+              <Button onClick={handleLogout} appearance="secondaryReverse">
+                Logout
+              </Button>
+            </div>
           ) : null}
         </>
       }

@@ -40,7 +40,7 @@ const LoginForm = ({ redirect }) => {
   return (
     <div>
       <div className="row login-header">
-        <Typography variant="displayText3">Login</Typography>
+        <Typography variant="displayText3">Log in</Typography>
       </div>
 
       <div className="row login-text">
