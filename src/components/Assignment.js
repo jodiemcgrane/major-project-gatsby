@@ -37,7 +37,10 @@ const Assignment = ({
             {journals.map(journal => {
               if (journal.submitted === true) {
                 return (
-                  <Link to={`/journals/${journal.id}`} style={{ textDecoration: "none" }}>
+                  <Link
+                    to={`/journals/${journal.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
                     <Button
                       className="assignment-button"
                       appearance="secondary"
@@ -46,30 +49,6 @@ const Assignment = ({
                       View Journal
                     </Button>
                   </Link>
-                )
-              } else if (journal.submitted === false) {
-                return (
-                  <>
-                    <Button
-                      className="assignment-button"
-                      appearance="secondary"
-                      onClick={function S() {}}
-                    >
-                      Start Journal
-                    </Button>
-                  </>
-                )
-              } else {
-                return (
-                  <>
-                    <Button
-                      className="assignment-button"
-                      appearance="secondary"
-                      onClick={function S() {}}
-                    >
-                      Start Journal
-                    </Button>
-                  </>
                 )
               }
             })}
