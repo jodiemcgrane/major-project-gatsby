@@ -5,7 +5,7 @@ import { navigate } from "gatsby"
 import axios from "axios"
 
 //React Quill
-import ReactQuill from "react-quill"
+//import ReactQuill from "react-quill"
 import "react-quill/dist/quill.snow.css"
 
 //Atlas Components
@@ -23,7 +23,7 @@ const EditJournal = ({ journal }) => {
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
   //const [text, setText] = useState("")
-  const [form, setForm] = useState()
+  //const [form, setForm] = useState()
 
   //journal
   const [journalData, setJournalData] = useState({})
@@ -37,7 +37,7 @@ const EditJournal = ({ journal }) => {
         setTitle(response.data)
         setAbout(response.data)
         //setText(response.data)
-        setForm(response.data)
+        //setForm(response.data)
       })
       .catch(err => {
         console.log(err)
@@ -55,12 +55,12 @@ const EditJournal = ({ journal }) => {
   //   })
   // }
 
-  const handleForm = e => {
-    setForm(prevState => ({
-      ...prevState,
-      [e.target.value]: e.target.value,
-    }))
-  }
+  // const handleForm = e => {
+  //   setForm(prevState => ({
+  //     ...prevState,
+  //     [e.target.value]: e.target.value,
+  //   }))
+  // }
 
   const saveForm = () => {
     // e.preventDefault()
@@ -85,14 +85,14 @@ const EditJournal = ({ journal }) => {
   //End of edit journal code
 
   //React Quill modules
-  const modules = {
-    toolbar: [
-      [{ header: [1, 2, 3, false] }, { font: [] }],
-      ["bold", "italic", "underline", "blockquote", "code"],
-      [{ list: "ordered" }, { list: "bullet" }],
-      ["link"],
-    ],
-  }
+  // const modules = {
+  //   toolbar: [
+  //     [{ header: [1, 2, 3, false] }, { font: [] }],
+  //     ["bold", "italic", "underline", "blockquote", "code"],
+  //     [{ list: "ordered" }, { list: "bullet" }],
+  //     ["link"],
+  //   ],
+  // }
 
   return (
     <>

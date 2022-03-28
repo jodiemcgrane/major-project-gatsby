@@ -14,7 +14,6 @@ import {
   Input,
   ButtonGroup,
   Button,
-  Checkbox,
 } from "@atlas-design-system/react"
 
 const CreateJournal = ({ assignment, state, props }) => {

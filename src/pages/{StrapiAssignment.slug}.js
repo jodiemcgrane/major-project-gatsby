@@ -2,9 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
-//Images
-import { StaticImage } from "gatsby-plugin-image"
-
 //MomentJS
 import moment from "moment"
 
@@ -15,7 +12,6 @@ import Layout from "../components/layout"
 import {
   Typography,
   Button,
-  Input,
   ButtonGroup,
   Card,
   ArrowRightIcon,

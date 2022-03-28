@@ -8,8 +8,6 @@ import useAuth from "../hooks/useAuth"
 import {
   Header,
   Button,
-  ArrowDownIcon,
-  Dropdown,
 } from "@atlas-design-system/react"
 
 const Navbar = () => {

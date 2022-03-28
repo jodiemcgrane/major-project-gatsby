@@ -1,1 +1,14 @@
-export { wrapRootElement } from './src/hooks/useAuth'
+//import { Toaster } from "@atlas-design-system/react"
+
+export { wrapRootElement } from "./src/hooks/useAuth"
+
+// exports.wrapPageElement = ({ element, props }) => {
+//   // props provide same data to Layout as Page element will get
+//   // including location, data, etc - you don't need to pass it
+//   return (
+//     <>
+//       {element}
+//       <Toaster />
+//     </>
+//   )
+// }
