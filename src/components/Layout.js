@@ -9,7 +9,7 @@ import "../assets/css/main.css"
 
 const Layout = ({ children }) => {
   return (
-    <div className="atls">
+    <div>
       <Navbar />
       {children}
       <Footer />

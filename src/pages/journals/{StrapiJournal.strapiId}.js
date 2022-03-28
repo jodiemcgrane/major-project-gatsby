@@ -39,7 +39,7 @@ const JournalTemplate = ({ data }) => {
   }
 
   return (
-    <>
+    <div className="atls">
       <Layout>
         <div className="page">
           <div className="row middle-xs single-journal-buttons">
@@ -109,7 +109,20 @@ const JournalTemplate = ({ data }) => {
           <div className="row">
             <div className="col-md-7 single-journal-text">
               {/* <Typography variant="contentText1"> */}
-              <ReactMarkdown children={journal.text} />
+              <ReactMarkdown
+                children={journal.text}
+                components={{
+                  h1: ({ node, ...props }) => (
+                    <h1 {...props} className="displayText1" />
+                  ),
+                  h2: ({ node, ...props }) => (
+                    <h2 {...props} className="displayText2" />
+                  ),
+                  p: ({ node, ...props }) => (
+                    <p {...props} className="contentText1" />
+                  ),
+                }}
+              />
               {/* </Typography> */}
             </div>
           </div>
@@ -144,7 +157,7 @@ const JournalTemplate = ({ data }) => {
                     </Typography>
                   </div>
 
-                  <div className="row">
+                  <div>
                     <div className="assignment-intro">
                       <Typography variant="displayText5">
                         {journal.assignment.introduction}
@@ -170,7 +183,7 @@ const JournalTemplate = ({ data }) => {
           </div>
         </div>
       </Layout>
-    </>
+    </div>
   )
 }
 
