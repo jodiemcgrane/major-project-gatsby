@@ -10,20 +10,30 @@ import {
   Button,
   Modal,
   TrashIcon,
+  toast,
 } from "@atlas-design-system/react"
 
 const DeleteJournalModal = ({ journal, open, handleClose }) => {
   //Delete Journal
   const submitDelete = () => {
-    axios
-      .delete(
-        `https://internport-api.herokuapp.com/journals/${journal.strapiId}`
-      )
-      .then(response => {
-        console.log(response.data)
-        navigate(`/app/journals`)
-      })
-      .catch(err => console.log(err))
+    toast.promise(
+      axios
+        .delete(
+          `https://internport-api.herokuapp.com/journals/${journal.strapiId}`
+        )
+        .then(response => {
+          console.log(response.data)
+          navigate(`/app/journals`)
+        })
+        .catch(error => {
+          console.log(error)
+        }),
+      {
+        loading: "Deleting journal...",
+        success: "Journal deleted!",
+        error: "Failed to delete journal.",
+      }
+    )
   }
 
   return (
