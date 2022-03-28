@@ -8,6 +8,8 @@ import {
   Button,
   Typography,
   Lozenge,
+  NotStartedIcon,
+  AuthorisedIcon,
 } from "@atlas-design-system/react"
 
 const Assignment = ({
@@ -35,7 +37,7 @@ const Assignment = ({
             {journals.map(journal => {
               if (journal.submitted === true) {
                 return (
-                  <Link style={{ textDecoration: "none" }}>
+                  <Link to={`/journals/${journal.id}`} style={{ textDecoration: "none" }}>
                     <Button
                       className="assignment-button"
                       appearance="secondary"
@@ -53,7 +55,7 @@ const Assignment = ({
                       appearance="secondary"
                       onClick={function S() {}}
                     >
-                      Continue Journal
+                      Start Journal
                     </Button>
                   </>
                 )
@@ -84,19 +86,21 @@ const Assignment = ({
             if (journal.submitted === true) {
               return (
                 <>
-                  <Lozenge appearance="success" text="Journal Complete" />
+                  <Lozenge
+                    appearance="success"
+                    icon={<AuthorisedIcon />}
+                    text="Journal Complete"
+                  />
                 </>
               )
             } else if (journal.submitted === false) {
               return (
                 <>
-                  <Lozenge appearance="warning" text="Journal In Progress" />
-                </>
-              )
-            } else {
-              return (
-                <>
-                  <Lozenge appearance="neutral" text="Journal Not Started" />
+                  <Lozenge
+                    appearance="neutral"
+                    icon={<NotStartedIcon />}
+                    text="Journal Not Started"
+                  />
                 </>
               )
             }
