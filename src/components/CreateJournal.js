@@ -14,6 +14,7 @@ import {
   Input,
   ButtonGroup,
   Button,
+  toast,
 } from "@atlas-design-system/react"
 
 const CreateJournal = ({ assignment, state, props }) => {
@@ -34,14 +35,22 @@ const CreateJournal = ({ assignment, state, props }) => {
       user: { id: userId },
     }
     console.log(form)
-
-    axios
-      .post("https://internport-api.herokuapp.com/journals", form)
-      .then(response => {
-        console.log(response.data)
-        navigate(`/app/journals`)
-      })
-      .catch(err => console.log(err))
+    toast.promise(
+      axios
+        .post("https://internport-api.herokuapp.com/journals", form)
+        .then(response => {
+          console.log(response.data)
+          //navigate(`/app/journals`)
+        })
+        .catch(error => {
+          console.log(error)
+        }),
+      {
+        loading: "Submitting journal...",
+        success: "Journal submitted!",
+        error: "Failed to submit journal.",
+      }
+    )
   }
 
   const submitForm = e => {
@@ -120,11 +129,7 @@ const CreateJournal = ({ assignment, state, props }) => {
         <Button appearance="primary" size="large" onClick={saveForm}>
           Save
         </Button>
-        <Button
-          appearance="secondary"
-          size="large"
-          onClick={submitForm}
-        >
+        <Button appearance="secondary" size="large" onClick={submitForm}>
           Submit
         </Button>
         <Button appearance="secondary" size="large">
