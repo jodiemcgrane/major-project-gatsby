@@ -53,6 +53,9 @@
 }
 
 /* LOGIN FORM/PAGE */
+.login-form {
+  justify-content: center;
+}
 
 .login-logo {
   padding-bottom: var(--spaceXXL);
@@ -73,6 +76,11 @@
 .login-button {
   justify-content: center;
   padding: var(--spaceXL) 0;
+}
+
+/* LOGIN PAGE VALIDATION */
+.validation-text {
+  color: var(--errorColor90);
 }
 
 /* HOME PAGE */

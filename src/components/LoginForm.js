@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { navigate } from "gatsby"
 import { Link } from "gatsby"
 
@@ -15,7 +15,10 @@ import {
 
 const LoginForm = ({ redirect }) => {
   const { state, login } = useAuth()
-  const [form, setForm] = useState({})
+  const initialValues = { identifier: "", password: "" }
+  const [form, setForm] = useState(initialValues)
+  const [formErrors, setFormErrors] = useState({})
+  const [isSubmit, setIsSubmit] = useState(false)
 
   const handleForm = e => {
     setForm(prevState => ({
@@ -24,7 +27,15 @@ const LoginForm = ({ redirect }) => {
     }))
   }
 
+  // const handleForm = e => {
+  //   const { name, value } = e.target
+  //   setForm({ ...form, [name]: value })
+  //   //console.log(form)
+  // }
+
   const submitForm = () => {
+    setFormErrors(validate(form))
+    setIsSubmit(true)
     login({
       identifier: form.identifier,
       password: form.password,
@@ -34,7 +45,32 @@ const LoginForm = ({ redirect }) => {
         console.log(state)
         navigate(redirect)
       })
-      .catch(err => console.log(err))
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+  useEffect(() => {
+    console.log(formErrors)
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(form)
+    }
+  }, [formErrors])
+
+  const validate = values => {
+    const errors = {}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
+    if (!values.identifier) {
+      errors.identifier = "Email is required"
+    } else {
+      errors.identifier = "Invalid email or password"
+    }
+    if (!values.password) {
+      errors.password = "Password is required"
+    } else {
+      errors.password = "Invalid email or password"
+    }
+    return errors
   }
 
   return (
@@ -50,13 +86,28 @@ const LoginForm = ({ redirect }) => {
       </div>
 
       <FormControl label="Email">
-        <Input name="identifier" onChange={handleForm} />
+        <Input
+          name="identifier"
+          onChange={handleForm}
+          value={form.identifier}
+        />
       </FormControl>
+      <Typography className="validation-text" variant="contentText2">
+        {formErrors.identifier}
+      </Typography>
 
       <div className="login-input">
         <FormControl label="Password">
-          <Input type="password" name="password" onChange={handleForm} />
+          <Input
+            type="password"
+            name="password"
+            onChange={handleForm}
+            value={form.password}
+          />
         </FormControl>
+        <Typography className="validation-text" variant="contentText2">
+          {formErrors.password}
+        </Typography>
       </div>
 
       <div className="row login-button">

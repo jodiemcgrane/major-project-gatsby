@@ -27,7 +27,7 @@ const WelcomePage = ({ location }) => {
           />
         </div>
       </div>
-      <div className="row center-xs middle-xs col-xs col-md-6">
+      <div className="row login-form middle-xs col-xs col-md-6">
         <div className="col-md-6">
           <div className="box">
             <div className="login-logo">
