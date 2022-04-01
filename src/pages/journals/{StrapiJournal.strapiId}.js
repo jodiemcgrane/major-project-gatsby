@@ -118,6 +118,9 @@ const JournalTemplate = ({ data }) => {
                   h2: ({ node, ...props }) => (
                     <h2 {...props} className="displayText2" />
                   ),
+                  h3: ({ node, ...props }) => (
+                    <h3 {...props} className="displayText3" />
+                  ),
                   p: ({ node, ...props }) => (
                     <p {...props} className="contentText1" />
                   ),
