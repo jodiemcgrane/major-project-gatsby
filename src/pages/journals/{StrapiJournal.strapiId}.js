@@ -10,6 +10,7 @@ import moment from "moment"
 //Components
 import Layout from "../../components/Layout"
 import DeleteJournalModal from "../../components/DeleteJournalModal"
+import AddToFeatured from "../../components/AddToFeatured"
 
 //Atlas Components
 import {
@@ -82,6 +83,7 @@ const JournalTemplate = ({ data }) => {
                     handleClose={handleClose}
                     journal={journal}
                   />
+                  <AddToFeatured />
                 </ButtonGroup>
               </div>
             </div>
