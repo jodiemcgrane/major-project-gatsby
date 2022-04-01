@@ -83,7 +83,7 @@ const JournalTemplate = ({ data }) => {
                     handleClose={handleClose}
                     journal={journal}
                   />
-                  <AddToFeatured />
+                  <AddToFeatured journal={journal} />
                 </ButtonGroup>
               </div>
             </div>
