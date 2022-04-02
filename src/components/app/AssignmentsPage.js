@@ -44,7 +44,7 @@ const AssignmentsPage = () => {
     <div className="page">
       <div className="row assignments-page-header">
         <div className="col-md-5">
-          <Typography variant="displayText4">
+          <Typography variant="displayText3">
             Assignments ({total.totalCount})
           </Typography>
         </div>
@@ -58,7 +58,7 @@ const AssignmentsPage = () => {
         </div>
         <div className="col-md-4">
           <IconCard
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet."
             heading="Need tips on writing?"
             icon={<InformationV2Icon />}
             onClick={function S() {}}
