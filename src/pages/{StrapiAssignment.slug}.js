@@ -48,7 +48,10 @@ const AssignmentTemplate = ({ data }) => {
                     {assignment.journals.map(journal => {
                       if (journal.submitted === true) {
                         return (
-                          <>
+                          <Link
+                            to={`/journals/${journal.id}`}
+                            style={{ textDecoration: "none" }}
+                          >
                             <Button
                               className="assignment-button"
                               appearance="primary"
@@ -56,49 +59,17 @@ const AssignmentTemplate = ({ data }) => {
                             >
                               View Journal
                             </Button>
-                            <Link
-                              style={{ textDecoration: "none" }}
-                              to="/journals/create"
-                              state={{ assignment }}
-                            >
-                              <Button appearance="secondary">
-                                New Journal
-                              </Button>
-                            </Link>
-                          </>
+                          </Link>
                         )
                       } else if (journal.submitted === false) {
                         return (
-                          <>
-                            <Button
-                              className="assignment-button"
-                              appearance="primary"
-                              onClick={function S() {}}
-                            >
-                              Continue Journal
-                            </Button>
-                            <Link
-                              style={{ textDecoration: "none" }}
-                              to="/journals/create"
-                              state={{ assignment }}
-                            >
-                              <Button appearance="secondary">
-                                New Journal
-                              </Button>
-                            </Link>
-                          </>
-                        )
-                      } else {
-                        return (
-                          <>
-                            <Button
-                              className="assignment-button"
-                              appearance="primary"
-                              onClick={function S() {}}
-                            >
-                              Start Journal
-                            </Button>
-                          </>
+                          <Link
+                            style={{ textDecoration: "none" }}
+                            to="/journals/create"
+                            state={{ assignment }}
+                          >
+                            <Button appearance="primary">Start Journal</Button>
+                          </Link>
                         )
                       }
                     })}
