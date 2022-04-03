@@ -44,25 +44,9 @@ const AssignmentsPage = () => {
     <div className="page">
       <div className="row assignments-page-header">
         <div className="col-md-5">
-          <Typography variant="displayText3">
-            Assignments ({total.totalCount})
+          <Typography variant="displayText4">
+            Total Assignments ({total.totalCount})
           </Typography>
-        </div>
-      </div>
-      <div className="row between-xs assignments-page-introduction">
-        <div className="col-md-7">
-          <Typography variant="displayText5">
-            Literally shoreditch yr try-hard four dollar toast. Ennui man bun
-            vape kickstarter ethical forage slow-carb cornhole hella occupy.
-          </Typography>
-        </div>
-        <div className="col-md-4">
-          <IconCard
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet."
-            heading="Need tips on writing?"
-            icon={<InformationV2Icon />}
-            onClick={function S() {}}
-          />
         </div>
       </div>
 

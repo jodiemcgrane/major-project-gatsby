@@ -23,6 +23,17 @@ const Assignment = ({
   journals,
   slug,
 }) => {
+  let lozenge
+
+  if (journals.length === 0) {
+    lozenge = (
+      <Lozenge
+        appearance="neutral"
+        icon={<NotStartedIcon />}
+        text="Journal Not Started"
+      />
+    )
+  }
   return (
     <>
       <Card
@@ -72,18 +83,9 @@ const Assignment = ({
                   />
                 </>
               )
-            } else if (journal.submitted === false) {
-              return (
-                <>
-                  <Lozenge
-                    appearance="neutral"
-                    icon={<NotStartedIcon />}
-                    text="Journal Not Started"
-                  />
-                </>
-              )
             }
           })}
+          {lozenge}
         </div>
 
         <div className="row assignments-card-text">
