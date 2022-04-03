@@ -369,3 +369,29 @@
 .page-bottom {
   padding-bottom: 100px;
 }
+
+/* INTERNSHIP EXPERIENCE */
+
+.resources-hero-display {
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.resources-hero {
+  background-color: var(--primaryA900);
+}
+
+.resources-hero-text {
+  color: var(--primaryB200);
+}
+
+.resources-page {
+  padding-top: var(--spaceXL);
+  padding-bottom: 100px;
+}
+
+.resources-text-space {
+  padding-left: var(--spaceXL);
+  margin-top: var(--spaceL);
+  margin-bottom: var(--spaceL);
+}
