@@ -29,14 +29,6 @@ const InternshipExperience = () => {
                   </Typography>
                 </div>
               </div>
-              {/* <div className="col-md-6">
-                <StaticImage
-                  src="../../assets/images/internship-experience.jpeg"
-                  alt="Resources Hero"
-                  placeholder="blurred"
-                  layout="constrained"
-                />
-              </div> */}
             </div>
           </div>
         </div>
@@ -52,11 +44,18 @@ const InternshipExperience = () => {
             </div>
 
             <div className="col-md-6">
+              <div className="row program-about">
+                <Typography variant="displayText6">
+                  About the programme
+                </Typography>
+              </div>
+
               <div className="row resources-text-space">
                 <Typography variant="contentText1">
-                  Annually, we run a 6-month internship comprised of four
-                  pillars. The role, corporate social responsibility, learning
-                  and development and intrapreneurship (see what we did there?)
+                  Annually, we run a 6-month (Jan – July) internship out of our
+                  Dublin office where Interns become a fully fledged
+                  Travelporter and work alongside a team of talented
+                  professionals.
                 </Typography>
               </div>
 
@@ -70,9 +69,17 @@ const InternshipExperience = () => {
 
               <div className="row resources-text-space">
                 <Typography variant="contentText1">
-                  They have a council dedicated to supporting and guiding them
-                  along the way, whilst also providing challenges worthy of the
-                  experience.
+                  Our Dublin internship program is an experience like no other
+                  and we always look to bring back those who succeed after
+                  graduation.
+                </Typography>
+              </div>
+
+              <div className="row resources-text-space">
+                <Typography variant="contentText1">
+                  Historically, our Dublin internships have been technology
+                  focused, with students coming in as Software Development
+                  Interns, however we are looking to expand.
                 </Typography>
               </div>
 
@@ -80,10 +87,7 @@ const InternshipExperience = () => {
                 <Typography variant="contentText1">
                   Our interns <b>always</b> tell us how pleasantly surprised
                   they are by the extent of exposure, responsibility and fun
-                  (yes, really) they have here. As an intern, they are relied
-                  upon to apply their skills and offer solutions to projects
-                  that <b>matter!</b> They are a fully fledged Travelporter
-                  right from the off.
+                  (yes, really) they have here.
                 </Typography>
               </div>
             </div>
