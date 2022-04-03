@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 //Images
 import { StaticImage } from "gatsby-plugin-image"
@@ -8,7 +9,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Journals from "../Journals"
 
 //Atlas Components
-import { Typography } from "@atlas-design-system/react"
+import { Typography, IconCard, EditIcon } from "@atlas-design-system/react"
 
 const query = graphql`
   {
@@ -75,11 +76,23 @@ const JournalsPage = () => {
       </div>
 
       <div className="page">
-        <div className="row journals-page-header">
-          <div className="col-md-6">
-            <Typography variant="displayText5">
+        <div className="row between-xs middle-xs journals-page-header">
+          <div>
+            <Typography variant="displayText4">
               Total Journals ({total.totalCount})
             </Typography>
+          </div>
+          <div className="assignment-icon-card">
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/app/assignments"
+            >
+              <IconCard
+                description="Ready to start a new assignment?"
+                heading="Assignments"
+                icon={<EditIcon />}
+              />
+            </Link>
           </div>
         </div>
 

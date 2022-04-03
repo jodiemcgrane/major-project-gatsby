@@ -239,8 +239,8 @@
 }
 
 .journals-page-header {
-  padding-top: var(--spaceXXL);
-  padding-bottom: var(--spaceL);
+  padding-top: var(--spaceXL);
+  padding-bottom: var(--spaceXL);
   padding-left: var(--spaceXXL);
 }
 
@@ -256,6 +256,10 @@
 .journals-card-space {
   margin-right: var(--spaceL);
   margin-bottom: var(--spaceL);
+}
+
+.assignment-icon-card {
+  padding-right: 48px;
 }
 
 /* CREATE JOURNAL PAGE */
