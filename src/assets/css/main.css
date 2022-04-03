@@ -167,16 +167,13 @@
 /* ASSIGNMENTS PAGE */
 
 .assignments-page-header {
-  padding-top: var(--spaceXXL);
-  padding-bottom: var(--spaceM);
+  padding-top: var(--spaceXL);
+  padding-bottom: var(--spaceXL);
+  padding-left: var(--spaceXXL);
 }
 
-/* .assignments-page-introduction {
-  padding-bottom: var(--spaceM);
-} */
-
 .assignments-row {
-  padding-left: var(--spaceM);
+  padding-left: var(--spaceXXL);
 }
 
 .assignments-card {
@@ -193,6 +190,22 @@
 
 .assignment-button {
   margin-left: var(--spaceM);
+}
+
+.journal-icon-card {
+  padding-right: 30px;
+}
+
+.assignment-tips {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  margin-bottom: var(--spaceL);
+}
+
+.tips-top-space {
+  padding-top: var(--spaceL);
 }
 
 /* SINGLE ASSIGNMENT PAGE */
