@@ -240,15 +240,12 @@
 
 .journals-page-header {
   padding-top: var(--spaceXXL);
-  padding-bottom: var(--spaceM);
+  padding-bottom: var(--spaceL);
+  padding-left: var(--spaceXXL);
 }
 
 .journals-page-introduction {
   padding-bottom: var(--spaceL);
-}
-
-.journals-row {
-  padding-left: var(--spaceM);
 }
 
 .journals-about {
@@ -256,8 +253,9 @@
   padding-right: var(--spaceM);
 }
 
-.journals-card {
-  margin-bottom: var(--spaceXXL);
+.journals-card-space {
+  margin-right: var(--spaceL);
+  margin-bottom: var(--spaceL);
 }
 
 /* CREATE JOURNAL PAGE */
@@ -349,4 +347,8 @@
 
 .modal-buttons {
   padding-bottom: var(--spaceS);
+}
+
+.page-bottom {
+  padding-bottom: 100px;
 }

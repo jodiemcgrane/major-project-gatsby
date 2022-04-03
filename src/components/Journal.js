@@ -80,7 +80,7 @@ const Journal = ({
           </ButtonGroup>
         }
         illustration={<NotesIllustration />}
-        className="journals-card"
+        className="col-xs col-md-5 journals-card-space"
       >
         <div className="row between-xs">
           <Typography variant="displayText6">{title}</Typography>
@@ -89,8 +89,8 @@ const Journal = ({
         <div className="row journals-about">
           <Typography variant="contentText1">{about}</Typography>
         </div>
-        <div className="row between-xs">
-          <Typography variant="contentText2">Written by {username}</Typography>
+        <div className="row between-xs middle-xs">
+          <Typography variant="contentText2">{username}</Typography>
           <Typography variant="contentText2">
             {moment(published_at).format("LL")}
           </Typography>

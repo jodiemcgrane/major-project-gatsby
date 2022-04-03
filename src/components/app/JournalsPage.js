@@ -47,17 +47,18 @@ const JournalsPage = () => {
             <div className="col-md-6 home-hero-section-left">
               <div className="home-hero-header">
                 <Typography variant="displayText2">
-                  Journal Awesomeness
+                  Intern Development Portfolio
                 </Typography>
               </div>
               <div className="home-hero-text">
                 <Typography variant="displayText5">
-                  Some introduction text about the journals page wriiten here.
+                  Keep your journals all in the one place.
                 </Typography>
               </div>
               <div className="home-hero-text">
                 <Typography variant="contentText1">
-                  Some introduction text about the journals page wriiten here.
+                  If you are struggling with your Development Portfolio, use
+                  your support network.
                 </Typography>
               </div>
             </div>
@@ -76,24 +77,17 @@ const JournalsPage = () => {
       <div className="page">
         <div className="row journals-page-header">
           <div className="col-md-6">
-            <Typography variant="displayText3">
-              Journals ({total.totalCount})
-            </Typography>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-8 journals-page-introduction">
             <Typography variant="displayText5">
-              Literally shoreditch yr try-hard four dollar toast. Ennui man bun
-              vape kickstarter ethical forage slow-carb cornhole hella occupy.
+              Total Journals ({total.totalCount})
             </Typography>
           </div>
         </div>
-        <div className="row journals-row journals-display">
-          <div className="col-md-4 col-md-9">
-            <Journals journals={journals} />
-          </div>
+
+        <div className="row journals-display">
+          <Journals journals={journals} />
         </div>
+
+        <div className="page-bottom"></div>
       </div>
     </>
   )
