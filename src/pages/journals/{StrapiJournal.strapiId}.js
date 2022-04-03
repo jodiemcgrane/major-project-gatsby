@@ -83,7 +83,6 @@ const JournalTemplate = ({ data }) => {
                     handleClose={handleClose}
                     journal={journal}
                   />
-                  <AddToFeatured journal={journal} />
                 </ButtonGroup>
               </div>
             </div>
@@ -101,7 +100,7 @@ const JournalTemplate = ({ data }) => {
           </div>
 
           <div className="row between-xs">
-            <div className="col-md-8">
+            <div className="col-md-9">
               <Typography variant="contentText1">
                 {moment(journal.published_at).format("LL")}
               </Typography>
@@ -132,13 +131,15 @@ const JournalTemplate = ({ data }) => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-xs col-md-4">
+          <div className="col-md-7">
+            <div className="row between-xs middle-xs">
               <Typography variant="contentText1">
                 Written by {journal.user.username}
               </Typography>
+              <AddToFeatured journal={journal} />
             </div>
           </div>
+
           <div className="row assignment-display">
             <div className="col-xs col-md-11 journal-assignment-card">
               <Card

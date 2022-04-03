@@ -67,7 +67,7 @@ const AddToFeatured = ({ journal }) => {
     <Link style={{ textDecoration: "none" }}>
       {isFeatured ? (
         <Button
-          appearance="primary"
+          appearance="secondary"
           icon={<CloseIcon />}
           onClick={removeFeaturedForm}
         >
@@ -75,7 +75,7 @@ const AddToFeatured = ({ journal }) => {
         </Button>
       ) : (
         <Button
-          appearance="primary"
+          appearance="secondary"
           icon={<HeartIcon />}
           onClick={addFeaturedForm}
         >
