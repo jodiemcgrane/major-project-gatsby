@@ -3,14 +3,14 @@ import React from "react"
 //Components
 import Layout from "../../components/Layout"
 
-const TipsOnWriting = () => {
+const InternshipExperience = () => {
   return (
     <div className="atls">
       <Layout>
-        <div className="page">Tips on writing</div>
+        <div className="page">Experience</div>
       </Layout>
     </div>
   )
 }
 
-export default TipsOnWriting
+export default InternshipExperience
