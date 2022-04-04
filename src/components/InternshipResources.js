@@ -28,7 +28,7 @@ const InternshipResource = () => {
         </div>
         <div className="row bottom-xs home-resources-button-one">
           <Link
-            to="/resources/tips-on-writing"
+            to="/resources/internship-experience"
             style={{ textDecoration: "none" }}
           >
             <Button appearance="secondary" size="large">
