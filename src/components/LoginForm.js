@@ -62,13 +62,9 @@ const LoginForm = ({ redirect }) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!values.identifier) {
       errors.identifier = "Email is required"
-    } else {
-      errors.identifier = "Invalid email or password"
     }
     if (!values.password) {
       errors.password = "Password is required"
-    } else {
-      errors.password = "Invalid email or password"
     }
     return errors
   }
