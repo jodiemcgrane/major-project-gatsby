@@ -399,3 +399,17 @@
   margin-top: var(--spaceL);
   margin-bottom: var(--spaceL);
 }
+
+/* STUDENT */
+
+.section {
+  padding-top: var(--spaceXL);
+}
+
+.tips-heading {
+  padding-top: var(--spaceL);
+}
+
+.tips-paragraph {
+  padding-top: var(--spaceS);
+}
