@@ -46,7 +46,7 @@ const StudentToWork = () => {
             <div className="row">
               <div className="col-md-7">
                 <Typography variant="displayText3">
-                  10 Tips to Help Transiton from Student to Profressional Life
+                  5 Tips to Help Transiton from Student to Profressional Life
                 </Typography>
               </div>
             </div>
@@ -73,10 +73,92 @@ const StudentToWork = () => {
 
             <div className="row">
               <div className="col-md-7 tips-heading">
-                <Typography variant="displayText6">2. Communication</Typography>
+                <Typography variant="displayText6">
+                  2. Try Not to Feel Intimidated
+                </Typography>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-8 tips-paragraph">
+                <Typography variant="contentText1">
+                  During your time as a student, the only people you probably
+                  would have come across regularly were in more of a 'senior'
+                  position to you were your lecturers. At Travelport, you will
+                  come across people who are much older than you, especially in
+                  more senior posititons - possibily positions you could be in
+                  one day! Try not to feel initmidated by this, see it as an
+                  opportunity to learn from people who are more than happy to
+                  share their skills and pass them onto you. Everyone has to
+                  start somewhere.
+                </Typography>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-7 tips-heading">
+                <Typography variant="displayText6">3. Networking</Typography>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-8 tips-paragraph">
+                <Typography variant="contentText1">
+                  Networking is extremely important and useful for graduates and
+                  future graduates. Not only do you have your lecturers and
+                  classmates as people in your network. At Travelport, you will
+                  find a lot more, especially during your internship. Talk to as
+                  many people as you can about your aspirations, you never know
+                  what advice or help you may receive. It is also a good way to
+                  listen out for employment if it is something you will be
+                  interested in after completing your internship. That goes to
+                  your online presence! Make sure your online presence is
+                  presentable. Keep yourself respectable on all social platforms
+                  and the connection you make in person, connect with them
+                  online too.
+                </Typography>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-7 tips-heading">
+                <Typography variant="displayText6">
+                  4. Make Your Mark
+                </Typography>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-8 tips-paragraph">
+                <Typography variant="contentText1">
+                  Don't wait for things to happen, make them happen. Get
+                  involved, throw yourseld into the work assigned and show you
+                  enthusiasm. Speak up and don't be afraid to voice your
+                  opinions and ideas. Set yourself some long-term and short-term
+                  goals while your'e with us at Travelport! Be honest with
+                  yourself and improve where you think you should. Use your
+                  intern development portfolio to discuss your goals.
+                </Typography>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-7 tips-heading">
+                <Typography variant="displayText6">
+                  5. Get into a Routine
+                </Typography>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-8 tips-paragraph">
+                <Typography variant="contentText1">
+                  As a student, it is easy to fall into irregular sleeping
+                  habits. When working a job with regular hour, though, that is
+                  a bit harder to maintain and will definitley affect your
+                  productivity. Train yourself to get into the habit of getting
+                  up early every day of the week at the same times scheduled.
+                </Typography>
               </div>
             </div>
           </div>
+          <div className="page-bottom"></div>
         </div>
       </Layout>
     </div>

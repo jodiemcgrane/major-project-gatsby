@@ -407,9 +407,10 @@
 }
 
 .tips-heading {
-  padding-top: var(--spaceL);
+  padding-top: var(--spaceXL);
 }
 
 .tips-paragraph {
   padding-top: var(--spaceS);
+  padding-left: var(--spaceM);
 }
