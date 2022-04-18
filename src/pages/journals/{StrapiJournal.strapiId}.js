@@ -89,7 +89,7 @@ const JournalTemplate = ({ data }) => {
           </div>
           <div className="row between-xs middle-xs single-journal-title">
             <div className="col-md-7">
-              <Typography variant="displayText2">{journal.title}</Typography>
+              <Typography variant="displayText1">{journal.title}</Typography>
             </div>
           </div>
 
@@ -109,7 +109,6 @@ const JournalTemplate = ({ data }) => {
 
           <div className="row">
             <div className="col-md-7 single-journal-text">
-              {/* <Typography variant="contentText1"> */}
               <ReactMarkdown
                 children={journal.text}
                 components={{
@@ -117,13 +116,19 @@ const JournalTemplate = ({ data }) => {
                     <h1 {...props} className="displayText1" />
                   ),
                   h2: ({ node, ...props }) => (
-                    <h2 {...props} className="displayText2" />
+                    <div className="heading-2">
+                      <h2 {...props} className="displayText3" />
+                    </div>
                   ),
                   h3: ({ node, ...props }) => (
-                    <h3 {...props} className="displayText3" />
+                    <div className="heading-3">
+                      <h3 {...props} className="displayText4" />
+                    </div>
                   ),
                   p: ({ node, ...props }) => (
-                    <p {...props} className="contentText1" />
+                    <div className="paragraph-1">
+                      <p {...props} className="contentText1" />
+                    </div>
                   ),
                 }}
               />

@@ -348,6 +348,19 @@
   margin-left: var(--spaceM);
 }
 
+.heading-2 {
+  padding: var(--spaceS) 0;
+}
+
+.heading-3 {
+  padding-top: var(--spaceM);
+}
+
+
+.paragraph-1 {
+  padding: var(--spaceXS) 0;
+}
+
 /* DELETE JOURNAL MODAL */
 
 .text-display {
