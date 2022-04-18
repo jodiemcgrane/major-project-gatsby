@@ -29,6 +29,7 @@
 
 @import "@atlas-design-system/core/dist/styles/partials/lozenge.css";
 @import "@atlas-design-system/core/dist/styles/partials/modal.css";
+@import "@atlas-design-system/core/dist/styles/partials/tooltip.css";
 
 /* HEADER */
 
@@ -123,6 +124,10 @@
 
 .featured-journals-header {
   padding: var(--spaceXXL) 0;
+}
+
+.featured-icon {
+  padding: 0 var(--spaceS);
 }
 
 .featured-journals-card-text {

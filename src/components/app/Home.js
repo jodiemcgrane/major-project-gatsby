@@ -11,7 +11,12 @@ import InternshipResources from "../InternshipResources"
 import StudentResources from "../StudentResources"
 
 //Atlas Components
-import { Typography, Button } from "@atlas-design-system/react"
+import {
+  Typography,
+  Button,
+  Tooltip,
+  InformationIcon,
+} from "@atlas-design-system/react"
 
 const query = graphql`
   {
@@ -75,6 +80,14 @@ const Home = ({ state }) => {
       <div className="page">
         <div className="row center-xs middle-xs featured-journals-header">
           <Typography variant="displayText3">Featured Journals</Typography>
+          <div className="featured-icon">
+            <Tooltip
+              content="Featured journals are journals you would like to add to the home page to feature them in your portfolio."
+              placement="right"
+            >
+              <InformationIcon width={35} />
+            </Tooltip>
+          </div>
         </div>
         <div className="row featured-journal-display">
           <FeaturedJournalCard journals={journals} />
