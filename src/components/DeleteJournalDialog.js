@@ -8,12 +8,11 @@ import {
   Typography,
   ButtonGroup,
   Button,
-  Modal,
-  TrashIcon,
+  Dialog,
   toast,
 } from "@atlas-design-system/react"
 
-const DeleteJournalModal = ({ journal, open, handleClose }) => {
+const DeleteJournalDialog = ({ journal, open, handleClose }) => {
   //Delete Journal
   const submitDelete = () => {
     toast.promise(
@@ -38,10 +37,10 @@ const DeleteJournalModal = ({ journal, open, handleClose }) => {
 
   return (
     <>
-      <Modal
+      <Dialog
         hidden={open}
         onDismiss={handleClose}
-        actionButtons={
+        buttons={
           <div className="modal-buttons">
             <ButtonGroup align="right">
               <Button
@@ -60,39 +59,19 @@ const DeleteJournalModal = ({ journal, open, handleClose }) => {
           </div>
         }
         title="Delete Journal"
-        size="small"
+        appearance="error"
       >
-        <div className="modal-spacing">
-          <div className="row text-display">
-            <TrashIcon width="125" />
-          </div>
-
-          <div className="row text-display">
-            <div className="col-md-6 modal-heading">
-              <Typography variant="displayText2">Delete journal?</Typography>
-            </div>
-          </div>
-
-          <div className="row text-display">
-            <div className="col-md-6 modal-subheading">
-              <Typography variant="displayText5">
-                Are you sure you want to permanently delete "{journal.title}"
-                journal.
-              </Typography>
-            </div>
-          </div>
-
-          <div className="row text-display">
-            <div className="col-md-6">
-              <Typography variant="contentText1">
-                You can't undo this action.
-              </Typography>
-            </div>
+        <div className="row">
+          <div>
+            <Typography variant="contenttext1">
+              Are you sure you want to permanently delete "{journal.title}"
+              journal?
+            </Typography>
           </div>
         </div>
-      </Modal>
+      </Dialog>
     </>
   )
 }
 
-export default DeleteJournalModal
+export default DeleteJournalDialog

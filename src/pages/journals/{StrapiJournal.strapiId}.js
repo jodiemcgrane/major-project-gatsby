@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
+//Markdown
 import ReactMarkdown from "react-markdown"
 
 //MomentJS
@@ -9,7 +10,7 @@ import moment from "moment"
 
 //Components
 import Layout from "../../components/Layout"
-import DeleteJournalModal from "../../components/DeleteJournalModal"
+import DeleteJournalDialog from "../../components/DeleteJournalDialog"
 import AddToFeatured from "../../components/AddToFeatured"
 
 //Atlas Components
@@ -28,7 +29,7 @@ const JournalTemplate = ({ data }) => {
   const journal = data.strapiJournal
   //console.log(journal)
 
-  //Handle Delete Modal
+  //Handle Delete Dialog
   const [open, setOpen] = useState(true)
 
   const handleOpen = () => {
@@ -78,7 +79,7 @@ const JournalTemplate = ({ data }) => {
                   >
                     Delete
                   </Button>
-                  <DeleteJournalModal
+                  <DeleteJournalDialog
                     open={open}
                     handleClose={handleClose}
                     journal={journal}
@@ -132,7 +133,6 @@ const JournalTemplate = ({ data }) => {
                   ),
                 }}
               />
-              {/* </Typography> */}
             </div>
           </div>
 
