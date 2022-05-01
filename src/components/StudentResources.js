@@ -33,9 +33,8 @@ const StudentResources = () => {
         </div>
         <div className="row home-resources-text">
           <Typography variant="contentText1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae
-            augue at turpis pellentesque interdum. Suspendisse nec eros
-            molestie, elementum tellus quis, finibus magna.
+            Follow some helpful tips to provide you with the insights needed
+            when transitioning from a student to full-time work.
           </Typography>
         </div>
         <div className="row bottom-xs home-resources-button-two">

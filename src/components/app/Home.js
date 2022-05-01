@@ -85,7 +85,7 @@ const Home = ({ state }) => {
               content="Featured journals are journals you would like to add to the home page to feature them in your portfolio."
               placement="right"
             >
-              <InformationIcon width={35} />
+              <InformationIcon width={32} />
             </Tooltip>
           </div>
         </div>

@@ -16,14 +16,14 @@ const InternshipResource = () => {
         </div>
         <div className="row home-resources-sub-heading">
           <Typography variant="displayText5">
-            Want to make the most out of your internship?
+            Information about the Travelport Internship Program
           </Typography>
         </div>
         <div className="row home-resources-text">
           <Typography variant="contentText1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae
-            augue at turpis pellentesque interdum. Suspendisse nec eros
-            molestie, elementum tellus quis, finibus magna.
+            Find out more about the Travelport Internship program, specifically
+            the Dublin Internship program. This program becomes better and
+            better each year, hear it from the previous interns!
           </Typography>
         </div>
         <div className="row bottom-xs home-resources-button-one">
