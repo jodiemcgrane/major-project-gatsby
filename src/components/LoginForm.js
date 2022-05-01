@@ -27,12 +27,6 @@ const LoginForm = ({ redirect }) => {
     }))
   }
 
-  // const handleForm = e => {
-  //   const { name, value } = e.target
-  //   setForm({ ...form, [name]: value })
-  //   //console.log(form)
-  // }
-
   const submitForm = () => {
     setFormErrors(validate(form))
     setIsSubmit(true)
@@ -59,7 +53,6 @@ const LoginForm = ({ redirect }) => {
 
   const validate = values => {
     const errors = {}
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
     if (!values.identifier) {
       errors.identifier = "Email is required"
     }
@@ -70,7 +63,7 @@ const LoginForm = ({ redirect }) => {
   }
 
   return (
-    <div>
+    <>
       <div className="row login-header">
         <Typography variant="displayText3">Log in</Typography>
       </div>
@@ -113,7 +106,7 @@ const LoginForm = ({ redirect }) => {
           type="submit"
           onClick={submitForm}
         >
-          Login
+          Log in
         </Button>
       </div>
 
@@ -122,7 +115,7 @@ const LoginForm = ({ redirect }) => {
           <Typography variant="bodyContent1">Forgot your password?</Typography>
         </Link>
       </div>
-    </div>
+    </>
   )
 }
 

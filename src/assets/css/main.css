@@ -55,6 +55,10 @@
 }
 
 /* LOGIN FORM/PAGE */
+.login-page {
+  overflow: hidden;
+}
+
 .login-form {
   justify-content: center;
 }
