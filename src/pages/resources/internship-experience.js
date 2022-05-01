@@ -25,7 +25,7 @@ const InternshipExperience = () => {
                   <br />
                   <br />
                   <Typography variant="heroText">
-                    LET YOU CAREER TAKE OFF
+                    LET YOUR CAREER TAKE OFF
                   </Typography>
                 </div>
               </div>

@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import moment from "moment"
 
 //Components
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 
 //Atlas Components
 import {

@@ -25,15 +25,14 @@ const Journal = ({
   user: { username },
   assignment,
 }) => {
+  console.log(assignment);
   let button
   let lozenge
 
   if (submitted === true) {
     button = (
       <Link to={`/journals/${strapiId}`} style={{ textDecoration: "none" }}>
-        <Button appearance="primary">
-          View
-        </Button>
+        <Button appearance="primary">View</Button>
       </Link>
     )
     lozenge = (
@@ -76,7 +75,11 @@ const Journal = ({
         actionButtons={
           <ButtonGroup>
             {button}
-            <Button appearance="secondary" className="assignment-button">View Assignment</Button>
+            <Link to={`/assignments/${assignment.slug}`} style={{ textDecoration: "none" }}>
+              <Button appearance="secondary" className="assignment-button">
+                View Assignment
+              </Button>
+            </Link>
           </ButtonGroup>
         }
         illustration={<NotesIllustration />}

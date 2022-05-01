@@ -28,6 +28,7 @@ const query = graphql`
         assignment {
           id
           title
+          slug
         }
       }
       totalCount
