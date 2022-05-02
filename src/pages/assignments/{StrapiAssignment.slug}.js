@@ -20,6 +20,21 @@ import {
 
 const AssignmentTemplate = ({ data }) => {
   const assignment = data.strapiAssignment
+  console.log(assignment)
+
+  let button
+
+  if (assignment.journals.length === 0) {
+    button = (
+      <Link
+        style={{ textDecoration: "none" }}
+        to="/journals/create"
+        state={{ assignment }}
+      >
+        <Button appearance="primary">Start Journal</Button>
+      </Link>
+    )
+  }
 
   return (
     <div className="atls">
@@ -61,18 +76,9 @@ const AssignmentTemplate = ({ data }) => {
                             </Button>
                           </Link>
                         )
-                      } else if (journal.submitted === false) {
-                        return (
-                          <Link
-                            style={{ textDecoration: "none" }}
-                            to="/journals/create"
-                            state={{ assignment }}
-                          >
-                            <Button appearance="primary">Start Journal</Button>
-                          </Link>
-                        )
                       }
                     })}
+                    {button}
                   </ButtonGroup>
                 }
               >

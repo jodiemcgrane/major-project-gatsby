@@ -34,7 +34,7 @@ const CreateJournal = ({ assignment, state, props }) => {
       assignment: { id: assignmentId },
       user: { id: userId },
     }
-    console.log(form)
+    //console.log(form)
     toast.promise(
       axios
         .post("https://internport-api.herokuapp.com/journals", form)

@@ -17,9 +17,6 @@ const Assignment = ({
   title,
   introduction,
   img: { url },
-  description,
-  dueDate,
-  published_at,
   journals,
   slug,
 }) => {
@@ -40,10 +37,11 @@ const Assignment = ({
         key={id}
         actionButtons={
           <ButtonGroup>
-            <Link to={`/assignments/${slug}`} style={{ textDecoration: "none" }}>
-              <Button appearance="primary" onClick={function S() {}}>
-                View Assignment
-              </Button>
+            <Link
+              to={`/assignments/${slug}`}
+              style={{ textDecoration: "none" }}
+            >
+              <Button appearance="primary">View Assignment</Button>
             </Link>
             {journals.map(journal => {
               if (journal.submitted === true) {
@@ -55,7 +53,6 @@ const Assignment = ({
                     <Button
                       className="assignment-button"
                       appearance="secondary"
-                      onClick={function S() {}}
                     >
                       View Journal
                     </Button>

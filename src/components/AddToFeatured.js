@@ -4,8 +4,6 @@ import axios from "axios"
 
 //Atlas Components
 import {
-  Typography,
-  ButtonGroup,
   Button,
   toast,
   HeartIcon,
