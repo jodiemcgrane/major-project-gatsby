@@ -179,7 +179,10 @@ const JournalTemplate = ({ data }) => {
                   <div>
                     {journal.assignment.description.map(description => {
                       return (
-                        <div className="assignment-description">
+                        <div
+                          className="assignment-description"
+                          key={journal.id}
+                        >
                           <ArrowRightIcon width="25" />
                           <Typography variant="contentText1">
                             {description.text}

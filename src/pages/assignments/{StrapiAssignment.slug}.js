@@ -46,7 +46,6 @@ const AssignmentTemplate = ({ data }) => {
                 <Button
                   icon={<ArrowLeftIcon />}
                   size="large"
-                  onClick={function S() {}}
                 >
                   Back to Assignments
                 </Button>
@@ -66,11 +65,11 @@ const AssignmentTemplate = ({ data }) => {
                           <Link
                             to={`/journals/${journal.id}`}
                             style={{ textDecoration: "none" }}
+                            key={journal.id}
                           >
                             <Button
                               className="assignment-button"
                               appearance="primary"
-                              onClick={function S() {}}
                             >
                               View Journal
                             </Button>
@@ -106,7 +105,7 @@ const AssignmentTemplate = ({ data }) => {
                 <div>
                   {assignment.description.map(description => {
                     return (
-                      <div className="assignment-description">
+                      <div className="assignment-description" key={assignment.id}>
                         <ArrowRightIcon width="25" />
                         <Typography variant="contentText1">
                           {description.text}

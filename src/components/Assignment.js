@@ -49,6 +49,7 @@ const Assignment = ({
                   <Link
                     to={`/journals/${journal.id}`}
                     style={{ textDecoration: "none" }}
+                    key={journal.id}
                   >
                     <Button
                       className="assignment-button"
@@ -74,13 +75,14 @@ const Assignment = ({
               return (
                 <>
                   <Lozenge
+                    key={journal.id}
                     appearance="success"
                     icon={<AuthorisedIcon />}
                     text="Journal Complete"
                   />
                 </>
               )
-            }
+            } 
           })}
           {lozenge}
         </div>

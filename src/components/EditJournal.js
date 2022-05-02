@@ -5,7 +5,7 @@ import { navigate } from "gatsby"
 import axios from "axios"
 
 //React Quill
-//import ReactQuill from "react-quill"
+import ReactQuill from "react-quill"
 import "react-quill/dist/quill.snow.css"
 
 //Atlas Components
@@ -22,7 +22,7 @@ const EditJournal = ({ journal }) => {
   //form
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
-  //const [text, setText] = useState("")
+  const [text, setText] = useState("")
   //const [form, setForm] = useState()
 
   //journal
@@ -46,14 +46,14 @@ const EditJournal = ({ journal }) => {
 
   if (!journal) return null
 
-  // const handleChange = value => {
-  //   setText((prev) => {
-  //     return {
-  //       ...prev,
-  //       text: value
-  //     }
-  //   })
-  // }
+  const handleChange = value => {
+    setText((prev) => {
+      return {
+        ...prev,
+        text: value
+      }
+    })
+  }
 
   // const handleForm = e => {
   //   setForm(prevState => ({
@@ -85,14 +85,14 @@ const EditJournal = ({ journal }) => {
   //End of edit journal code
 
   //React Quill modules
-  // const modules = {
-  //   toolbar: [
-  //     [{ header: [1, 2, 3, false] }, { font: [] }],
-  //     ["bold", "italic", "underline", "blockquote", "code"],
-  //     [{ list: "ordered" }, { list: "bullet" }],
-  //     ["link"],
-  //   ],
-  // }
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, 3, false] }, { font: [] }],
+      ["bold", "italic", "underline", "blockquote", "code"],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["link"],
+    ],
+  }
 
   return (
     <>
@@ -118,7 +118,7 @@ const EditJournal = ({ journal }) => {
         </div>
       </div>
 
-      {/* <div className="row">
+      <div className="row">
         <div className="col-md-8 rich-text-input">
           <FormControl label="Edit Journal">
             <ReactQuill
@@ -130,7 +130,7 @@ const EditJournal = ({ journal }) => {
             />
           </FormControl>
         </div>
-      </div> */}
+      </div>
 
       <ButtonGroup>
         <Button appearance="primary" size="large" onClick={saveForm}>

@@ -56,7 +56,7 @@ const CreateJournalPage = ({ location }) => {
                 <div>
                   {assignment.description.map(description => {
                     return (
-                      <div className="assignment-description">
+                      <div className="assignment-description" key={assignment.id}>
                         <ArrowRightIcon width="25" />
                         <Typography variant="contentText1">
                           {description.text}

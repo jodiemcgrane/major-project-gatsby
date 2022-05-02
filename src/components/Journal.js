@@ -25,7 +25,7 @@ const Journal = ({
   user: { username },
   assignment,
 }) => {
-  console.log(assignment);
+  //console.log(assignment);
   let button
   let lozenge
 
@@ -43,7 +43,7 @@ const Journal = ({
   } else if (submitted === false) {
     button = (
       <Link style={{ textDecoration: "none" }}>
-        <Button appearance="primary" onClick={function S() {}}>
+        <Button appearance="primary">
           Continue
         </Button>
       </Link>
@@ -56,7 +56,7 @@ const Journal = ({
   } else {
     button = (
       <>
-        <Button appearance="primary" onClick={function S() {}}>
+        <Button appearance="primary">
           Start
         </Button>
       </>

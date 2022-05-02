@@ -46,9 +46,9 @@ const CreateJournal = ({ assignment, state, props }) => {
           console.log(error)
         }),
       {
-        loading: "Submitting journal...",
-        success: "Journal submitted!",
-        error: "Failed to submit journal.",
+        loading: "Saving journal...",
+        success: "Journal saved!",
+        error: "Failed to save journal.",
       }
     )
   }
@@ -76,6 +76,7 @@ const CreateJournal = ({ assignment, state, props }) => {
 
   //End of create journal code
 
+  //Rich text edtior UI
   const modules = {
     toolbar: [
       [{ header: [1, 2, 3, false] }, { font: [] }],
