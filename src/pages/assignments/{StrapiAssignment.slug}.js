@@ -142,6 +142,7 @@ export const query = graphql`
         id
         submitted
       }
+      slug
     }
   }
 `

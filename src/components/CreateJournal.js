@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import { navigate } from "gatsby"
 
 //Axios
@@ -17,13 +18,14 @@ import {
   toast,
 } from "@atlas-design-system/react"
 
-const CreateJournal = ({ assignment, state, props }) => {
+const CreateJournal = ({ assignment, state }) => {
   //Create journal code
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
   const [text, setText] = useState("")
   const assignmentId = assignment.strapiId
   const userId = state.user.id
+  const slug = assignment.slug
 
   const saveForm = e => {
     e.preventDefault()
@@ -69,6 +71,7 @@ const CreateJournal = ({ assignment, state, props }) => {
       .post("https://internport-api.herokuapp.com/journals", form)
       .then(response => {
         console.log(response.data)
+        //Refresh GEt journals request
         navigate(`/app/journals`)
       })
       .catch(err => console.log(err))
@@ -127,15 +130,17 @@ const CreateJournal = ({ assignment, state, props }) => {
       </div>
 
       <ButtonGroup>
-        <Button appearance="primary" size="large" onClick={saveForm}>
+        {/* <Button appearance="primary" size="large" onClick={saveForm}>
           Save
-        </Button>
-        <Button appearance="secondary" size="large" onClick={submitForm}>
+        </Button> */}
+        <Button appearance="primary" size="large" onClick={submitForm}>
           Submit
         </Button>
-        <Button appearance="secondary" size="large">
-          Cancel
-        </Button>
+        <Link to={`/assignments/${slug}`} style={{ textDecoration: "none" }}>
+          <Button appearance="secondary" size="large">
+            Cancel
+          </Button>
+        </Link>
       </ButtonGroup>
     </>
   )
