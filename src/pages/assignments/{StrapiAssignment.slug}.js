@@ -16,6 +16,7 @@ import {
   Card,
   ArrowRightIcon,
   ArrowLeftIcon,
+  AddIcon,
 } from "@atlas-design-system/react"
 
 const AssignmentTemplate = ({ data }) => {
@@ -31,7 +32,9 @@ const AssignmentTemplate = ({ data }) => {
         to="/journals/create"
         state={{ assignment }}
       >
-        <Button appearance="primary">Start Journal</Button>
+        <Button appearance="primary" size="large" icon={<AddIcon />} iconAlign="right">
+          Create Journal
+        </Button>
       </Link>
     )
   }
@@ -43,10 +46,7 @@ const AssignmentTemplate = ({ data }) => {
           <div className="row back-to-assignments-button">
             <div className="col-xs">
               <Link style={{ textDecoration: "none" }} to="/app/assignments">
-                <Button
-                  icon={<ArrowLeftIcon />}
-                  size="large"
-                >
+                <Button icon={<ArrowLeftIcon />} size="large">
                   Back to Assignments
                 </Button>
               </Link>
@@ -105,7 +105,10 @@ const AssignmentTemplate = ({ data }) => {
                 <div>
                   {assignment.description.map(description => {
                     return (
-                      <div className="assignment-description" key={assignment.id}>
+                      <div
+                        className="assignment-description"
+                        key={assignment.id}
+                      >
                         <ArrowRightIcon width="25" />
                         <Typography variant="contentText1">
                           {description.text}
