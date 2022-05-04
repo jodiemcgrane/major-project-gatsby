@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "gatsby"
 import { navigate } from "gatsby"
 
 //Axios
@@ -17,6 +18,7 @@ import {
 } from "@atlas-design-system/react"
 
 const EditJournal = ({ journal }) => {
+  const strapiId = journal.strapiId
   //Edit journal code
 
   //form
@@ -47,10 +49,10 @@ const EditJournal = ({ journal }) => {
   if (!journal) return null
 
   const handleChange = value => {
-    setText((prev) => {
+    setText(prev => {
       return {
         ...prev,
-        text: value
+        text: value,
       }
     })
   }
@@ -124,7 +126,7 @@ const EditJournal = ({ journal }) => {
             <ReactQuill
               theme="snow"
               modules={modules}
-              defaultValue=''
+              defaultValue=""
               onChange={handleChange}
               value={journalData.text}
             />
@@ -136,9 +138,11 @@ const EditJournal = ({ journal }) => {
         <Button appearance="primary" size="large" onClick={saveForm}>
           Save
         </Button>
-        <Button appearance="secondary" size="large">
-          Cancel
-        </Button>
+        <Link to={`/journals/${strapiId}`} style={{ textDecoration: "none" }}>
+          <Button appearance="secondary" size="large">
+            Cancel
+          </Button>
+        </Link>
       </ButtonGroup>
     </>
   )
