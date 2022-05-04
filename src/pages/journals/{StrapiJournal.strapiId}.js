@@ -152,7 +152,12 @@ const JournalTemplate = ({ data }) => {
                 image={journal.assignment.img.url}
                 actionButtons={
                   <ButtonGroup>
-                    <Button appearance="primary">View All Assignments</Button>
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to={`/app/assignments`}
+                    >
+                      <Button appearance="primary">View All Assignments</Button>
+                    </Link>
                   </ButtonGroup>
                 }
               >
