@@ -42,7 +42,8 @@ const CreateJournal = ({ assignment, state }) => {
         .post("https://internport-api.herokuapp.com/journals", form)
         .then(response => {
           console.log(response.data)
-          //navigate(`/app/journals`)
+          fetch("http://localhost:8000/___graphql")
+          navigate(`/app/journals`)
         })
         .catch(error => {
           console.log(error)
@@ -66,15 +67,22 @@ const CreateJournal = ({ assignment, state }) => {
       user: { id: userId },
     }
     console.log(form)
-
-    axios
-      .post("https://internport-api.herokuapp.com/journals", form)
-      .then(response => {
-        console.log(response.data)
-        //Refresh GEt journals request
-        navigate(`/app/journals`)
-      })
-      .catch(err => console.log(err))
+    toast.promise(
+      axios
+        .post("https://internport-api.herokuapp.com/journals", form)
+        .then(response => {
+          console.log(response.data)
+          //Refresh GEt journals request
+          //fetch("http://localhost:8000/___graphql", { method: "GET" })
+          navigate(`/app/journals`)
+        })
+        .catch(err => console.log(err)),
+      {
+        loading: "Submitting journal...",
+        success: "Journal submitted!",
+        error: "Failed to submit journal.",
+      }
+    )
   }
 
   //End of create journal code
