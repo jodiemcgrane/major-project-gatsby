@@ -21,7 +21,7 @@ const FeaturedJournalCard = ({ journals }) => {
               <ButtonGroup>
                 <Link to={`/journals/${journal.strapiId}`} style={{ textDecoration: "none" }}>
                   <Button appearance="primary">
-                    See More
+                    See more
                   </Button>
                 </Link>
               </ButtonGroup>

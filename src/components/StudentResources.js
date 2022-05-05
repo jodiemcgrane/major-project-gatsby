@@ -43,7 +43,7 @@ const StudentResources = () => {
             style={{ textDecoration: "none" }}
           >
             <Button appearance="secondary" size="large">
-              Learn More
+              Learn more
             </Button>
           </Link>
         </div>

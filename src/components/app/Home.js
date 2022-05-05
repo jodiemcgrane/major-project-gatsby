@@ -59,7 +59,7 @@ const Home = ({ state }) => {
               </div>
               <Link style={{ textDecoration: "none" }} to="/app/assignments">
                 <Button appearance="primary" size="large">
-                  View Assignments
+                  View assignments
                 </Button>
               </Link>
             </div>
@@ -85,7 +85,7 @@ const Home = ({ state }) => {
               content="Featured journals are journals you would like to add to the home page to feature them in your portfolio."
               placement="right"
             >
-              <InformationIcon width={32} />
+              <InformationIcon width={30} />
             </Tooltip>
           </div>
         </div>
