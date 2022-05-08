@@ -36,7 +36,7 @@ const AssignmentTemplate = ({ data }) => {
         state={{ assignment }}
       >
         <Button appearance="primary" size="large" icon={<AddIcon />} iconAlign="right">
-          Create Journal
+          Create journal
         </Button>
       </Link>
     )
@@ -50,7 +50,7 @@ const AssignmentTemplate = ({ data }) => {
             <div className="col-xs">
               <Link style={{ textDecoration: "none" }} to="/app/assignments">
                 <Button icon={<ArrowLeftIcon />} size="large">
-                  Back to Assignments
+                  Back to assignments
                 </Button>
               </Link>
             </div>
@@ -74,7 +74,7 @@ const AssignmentTemplate = ({ data }) => {
                               className="assignment-button"
                               appearance="primary"
                             >
-                              View Journal
+                              View journal
                             </Button>
                           </Link>
                         )

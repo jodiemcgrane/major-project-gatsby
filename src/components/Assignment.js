@@ -41,7 +41,7 @@ const Assignment = ({
               to={`/assignments/${slug}`}
               style={{ textDecoration: "none" }}
             >
-              <Button appearance="primary">View Assignment</Button>
+              <Button appearance="primary">View assignment</Button>
             </Link>
             {journals.map(journal => {
               if (journal.submitted === true) {
@@ -55,7 +55,7 @@ const Assignment = ({
                       className="assignment-button"
                       appearance="secondary"
                     >
-                      View Journal
+                      View journal
                     </Button>
                   </Link>
                 )

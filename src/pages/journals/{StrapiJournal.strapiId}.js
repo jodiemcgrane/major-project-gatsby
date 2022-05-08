@@ -159,7 +159,7 @@ const JournalTemplate = ({ data }) => {
                       style={{ textDecoration: "none" }}
                       to={`/app/assignments`}
                     >
-                      <Button appearance="primary">View All Assignments</Button>
+                      <Button appearance="primary">View all assignments</Button>
                     </Link>
                   </ButtonGroup>
                 }
