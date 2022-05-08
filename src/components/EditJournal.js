@@ -15,6 +15,7 @@ import {
   Input,
   ButtonGroup,
   Button,
+  toast,
 } from "@atlas-design-system/react"
 
 const EditJournal = ({ journal }) => {
@@ -25,7 +26,7 @@ const EditJournal = ({ journal }) => {
   const [title, setTitle] = useState("")
   const [about, setAbout] = useState("")
   const [text, setText] = useState("")
-  //const [form, setForm] = useState()
+  const [form, setForm] = useState()
 
   //journal
   const [journalData, setJournalData] = useState({})
@@ -68,21 +69,27 @@ const EditJournal = ({ journal }) => {
     // e.preventDefault()
     const form = {
       title,
-      about,
+      //about,
       //text,
     }
     console.log(form)
-
-    axios
-      .put(
-        `https://internport-api.herokuapp.com/journals/${journal.strapiId}`,
-        form
-      )
-      .then(response => {
-        console.log(response.data)
-        navigate(`/app/journals`)
-      })
-      .catch(err => console.log(err))
+    toast.promise(
+      axios
+        .put(
+          `https://internport-api.herokuapp.com/journals/${journal.strapiId}`,
+          form
+        )
+        .then(response => {
+          console.log(response.data)
+          navigate(`/app/journals`)
+        })
+        .catch(err => console.log(err)),
+        {
+          loading: "Submitting edited journal...",
+          success: "Journal edited!",
+          error: "Failed to edit journal.",
+        }
+    )
   }
   //End of edit journal code
 
@@ -113,7 +120,7 @@ const EditJournal = ({ journal }) => {
         <div className="col-md-5 input-bottom">
           <FormControl label="Edit About">
             <Input
-              onChange={e => setAbout(e.target.value)}
+              // onChange={e => setAbout(e.target.value)}
               defaultValue={journalData.about}
             />
           </FormControl>
@@ -127,7 +134,7 @@ const EditJournal = ({ journal }) => {
               theme="snow"
               modules={modules}
               defaultValue=""
-              onChange={handleChange}
+              // onChange={handleChange}
               value={journalData.text}
             />
           </FormControl>
