@@ -1,3 +1,6 @@
+//Single Journal Page
+//Gatsby creates a page for each journal based on the strapiId property: UID
+
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"

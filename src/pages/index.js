@@ -1,3 +1,5 @@
+//Welcome page (first page "/")
+
 import React from "react"
 
 //Images

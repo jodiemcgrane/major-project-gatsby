@@ -1,3 +1,6 @@
+//Single Assignment Page
+//Gatsby creates a page for each assignment based on the slug property: UID
+
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"

@@ -1,3 +1,5 @@
+//Resources Page
+
 import React from "react"
 
 //Images

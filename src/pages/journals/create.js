@@ -1,3 +1,5 @@
+//Create Journal Page
+
 import React from "react"
 
 //MomentJS

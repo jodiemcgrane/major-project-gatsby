@@ -258,6 +258,7 @@
 /* JOURNALS PAGE */
 
 .journals-display {
+  padding-left: var(--spaceXXL);
   justify-content: center;
 }
 
@@ -277,8 +278,8 @@
 }
 
 .journals-card-space {
-  margin-right: var(--spaceL);
-  margin-bottom: var(--spaceL);
+  margin-right: var(--spaceXXL);
+  margin-bottom: var(--spaceXL);
 }
 
 .assignment-icon-card {
