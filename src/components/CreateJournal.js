@@ -27,34 +27,34 @@ const CreateJournal = ({ assignment, state }) => {
   const userId = state.user.id
   const slug = assignment.slug
 
-  const saveForm = e => {
-    e.preventDefault()
-    const form = {
-      title,
-      about,
-      text,
-      assignment: { id: assignmentId },
-      user: { id: userId },
-    }
-    //console.log(form)
-    toast.promise(
-      axios
-        .post("https://internport-api.herokuapp.com/journals", form)
-        .then(response => {
-          console.log(response.data)
-          fetch("http://localhost:8000/___graphql")
-          navigate(`/app/journals`)
-        })
-        .catch(error => {
-          console.log(error)
-        }),
-      {
-        loading: "Saving journal...",
-        success: "Journal saved!",
-        error: "Failed to save journal.",
-      }
-    )
-  }
+  // const saveForm = e => {
+  //   e.preventDefault()
+  //   const form = {
+  //     title,
+  //     about,
+  //     text,
+  //     assignment: { id: assignmentId },
+  //     user: { id: userId },
+  //   }
+  //   //console.log(form)
+  //   toast.promise(
+  //     axios
+  //       .post("https://internport-api.herokuapp.com/journals", form)
+  //       .then(response => {
+  //         console.log(response.data)
+  //         fetch("http://localhost:8000/___graphql")
+  //         navigate(`/app/journals`)
+  //       })
+  //       .catch(error => {
+  //         console.log(error)
+  //       }),
+  //     {
+  //       loading: "Saving journal...",
+  //       success: "Journal saved!",
+  //       error: "Failed to save journal.",
+  //     }
+  //   )
+  // }
 
   const submitForm = e => {
     e.preventDefault()
